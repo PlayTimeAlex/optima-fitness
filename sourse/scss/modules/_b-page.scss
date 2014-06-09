@@ -1,0 +1,10 @@
+.b-page {
+    padding: em(19) 0;
+    &__title {
+        font-size: em(44);
+        color: #464646;
+        font-family: $second-font;
+        font-weight: 300;
+        padding-bottom: em(11);
+    }
+}

@@ -1,0 +1,146 @@
+.b-header {
+    &__beforecart {
+        padding: em(12) 0 0;
+        float: left;
+    }
+    &__top {
+        padding: em(12) 0 em(26);
+    }
+    &__tel {
+        font-size: em(28);
+        color: $base__color;
+        font-family: $second-font;
+        font-weight: 900;
+        display: inline-block;
+        line-height: 1.5;
+        padding: 0 em(14, 28) 0 em(27, 28);
+        &-code {
+            font-weight: 300;
+            font-size: em(18, 28);
+        }
+    }
+    &__rcall {
+        display: inline-block;
+        line-height: 1.3;
+        color: $base__link-color;
+        border-bottom: 2px dotted $base__link-color;
+        font-size: em(13);
+        cursor: pointer;
+        font-family: $second-font;
+        font-weight: 900;
+        text-transform: uppercase;
+        &:hover {
+            border-bottom-color: transparent;
+        }
+    }
+    &__lang {
+        display: inline-block;
+        &-select.ru .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .ru:before {
+            background-position: 0 -22px;
+        }
+        &-select.ua .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .ua:before {
+            background-position: 0 -11px;
+        }
+        &-select.en .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .en:before {
+            background-position: 0 0;
+        }
+        &-select .jq-selectbox__select {
+            padding: em(5) em(21) em(5) em(31);
+            cursor: default;;
+            &:before {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: em(5);
+                width: 16px;
+                margin-top: -6px;
+                height: 11px;
+                background: blue;
+                vertical-align: middle;
+                background-image: url(../images/flags.png);
+            }
+            &-text {
+                font-size: em(14);
+                color: $base__link-color;
+                line-height: 1;
+            }
+        }
+        &-select .jq-selectbox__trigger-arrow {
+            $border-top-width: 4px;
+            border-top: $border-top-width solid $base__link-color;
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50%;
+            margin-top: -$border-top-width/2;
+            right: em(2);
+        }
+        &-select .jq-selectbox__dropdown {
+            padding: em(10) 0;
+            background: #fff;
+            z-index: 10;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+            cursor: default;
+            li {
+                font-size: em(14);
+                color: $base__link-color;
+                line-height: 1.3;
+                padding: 0 em(21, 14) em(2, 14) em(31, 14);
+                position: relative;
+                &:hover {
+                    background: rgba(0, 0, 0, .1);
+                }
+                &:before {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: em(5);
+                    width: 16px;
+                    margin-top: -6px;
+                    height: 11px;
+                    background: blue;
+                    vertical-align: middle;
+                    background-image: url(../images/flags.png);
+                }
+            }
+        }
+    }
+    &__cart {
+        float: right;
+        font-size: em(14);
+        color: #464646;
+        padding: em(5) 0 em(5) em(50, 14);
+        position: relative;
+        margin-top: em(8);
+
+        &-sum {
+            font-size: em(18, 14);
+            font-weight: bold;
+        }
+        &-icon {
+            font-size: em(31);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &-count {
+            $font-size: em(10, 31);
+            $height: em(18,31)/$font-size*1em;
+            font-size: $font-size;
+            line-height: $height;
+            border-radius: $height/2;
+            height: $height;
+            padding: 0 em(4);
+            background: #125681;
+            color: #fefefe;
+            position: absolute;
+            top: -$height/2;
+            right: -$height/2;
+            display: block;
+        }
+    }
+}

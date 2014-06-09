@@ -1,0 +1,16 @@
+.b-search {
+    position: relative;
+    &__submit {
+        $font-size: 16;
+        border: none;
+        background-color: transparent;
+        font-size: em($font-size);
+        position: absolute;
+        right: em(5);
+        top: 50%;
+        margin-top: - em(5);
+        padding: 0;
+        cursor: pointer;
+    }
+}
+

@@ -1,0 +1,50 @@
+.b-cart-tab {
+    border-bottom: 1px solid #c2c2c2;
+    counter-reset: point;
+    $active-color: #ef592c;
+    &__item {
+        display: block;
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        position: relative;
+
+        &:before {
+            content: counter(point);
+            counter-increment: point 1;
+            font-size: em(28);
+            font-weight: bold;
+            position: absolute;
+            left: em(3);
+            top: em(1);
+        }
+        &_active:before {
+            color: $active-color;
+        }
+        &_active:after {
+            content: " ";
+            display: block;
+            width: 100%;
+            height: em(6);
+            background: $active-color;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+        }
+    }
+    &__link {
+        font-size: em(14);
+        color: #909090;
+        font-weight: bold;
+        display: block;
+        text-decoration: none;
+        padding: em(18, 14) 0 em(18, 14) em(40, 14);
+        cursor: default;
+    }
+    &__item_active &__link {
+        color: $active-color;
+    }
+    &__tab {
+        padding: em(31) 0 em(65);
+    }
+}

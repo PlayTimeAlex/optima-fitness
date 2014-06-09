@@ -1,0 +1,18 @@
+.b-breadcrumb {
+    &__item {
+        font-size: em(12);
+        color: #000;
+        list-style: none;
+        display: inline-block;
+        padding: em(7) 0 0;
+        &:after {
+            content: "/";
+            margin: 0 em(4) 0 em(4);
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

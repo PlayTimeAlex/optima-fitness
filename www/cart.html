@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="stylesheet" href="css/style.min.css" media="all"/>
+    <script src="js/all.min.js"></script>
+    <!--[if lte IE 8 ]>
+    <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
+</head>
+<body>
+<header class="b-header">
+    <div class="b-header__top">
+        <div class="container">
+            <div class="row">
+                <div class="span2">
+                    <a href="#" class="b-header__logo"><img src="images/logo.svg" class="b-header__logo-img" width="173"
+                                                            alt="Optima Fitness"/></a>
+                </div>
+                <div class="span7">
+                    <div class="b-header__beforecart">
+                        <div class="b-header__lang">
+                            <select class="b-header__lang-select">
+                                <option value="ru" class="ru">Русский</option>
+                                <option value="ua" class="ua">Українська</option>
+                                <option value="en" class="en">English</option>
+                            </select>
+                        </div>
+                        <div class="b-header__tel"><span class="b-header__tel-code">+7 (495) </span>221-2595</div>
+                        <a class="b-header__rcall">обратный звонок</a>
+                    </div>
+                    <div class="b-header__cart">
+                        <div class="b-header__cart-icon icon-5"><span class="b-header__cart-count">10</span></div>
+                        на сумму: <span class="b-header__cart-sum">200 000.00</span> руб
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="b-nav">
+        <div class="container">
+            <ul class="b-nav__list">
+                <li class="b-nav__item"><a href="#" class="b-nav__link b-nav__link_current">беговые дорожки</a></li>
+                <!--
+                                        -->
+                <li class="b-nav__item"><a href="#" class="b-nav__link">эллиптические</a></li>
+                <!--
+                                        -->
+                <li class="b-nav__item"><a href="#" class="b-nav__link">велотренажер</a></li>
+                <!--
+                                        -->
+                <li class="b-nav__item"><a href="#" class="b-nav__link">гибрид треник</a></li>
+                <!--
+                                        -->
+                <li class="b-nav__item"><a href="#" class="b-nav__link">гребля</a></li>
+                <!--
+                                        -->
+                <li class="b-nav__item"><a href="#" class="b-nav__link">Оплата и доставка</a></li>
+                <!--
+                                        -->
+                <li class="b-nav__item"><a href="#" class="b-nav__link">контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="b-line b-line_breacrumb">
+    <div class="container">
+        <div class="row_8">
+            <div class="span6">
+                <ul class="b-breadcrumb">
+                    <li class="b-breadcrumb__item"><a href="#" class="b-breadcrumb__link">Главная</a></li>
+                    <li class="b-breadcrumb__item"><a href="#" class="b-breadcrumb__link">Корзина</a></li>
+                    <li class="b-breadcrumb__item">Покупка товара</li>
+                </ul>
+            </div>
+            <div class="span2">
+                <div class="b-search">
+                    <input type="text" class="b-form__text b-form__text_search" placeholder="поиск">
+                    <button type="submit" class="b-search__submit icon-6"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-page">
+<div class="container">
+<h2 class="b-page__title">ОФОРМИТЬ ЗАКАЗ</h2>
+
+<div class="b-cart">
+<div class="b-cart-tab clearfix">
+    <ul class="b-cart-tab__list">
+        <li class="b-cart-tab__item b-cart-tab__item_active"><a href="#" class="b-cart-tab__link">Выбор способа
+            доставки</a></li>
+        <li class="b-cart-tab__item"><a href="#" class="b-cart-tab__link">Адрес доставки</a></li>
+        <li class="b-cart-tab__item"><a href="#" class="b-cart-tab__link">Выбор способа оплаты</a></li>
+        <li class="b-cart-tab__item"><a href="#" class="b-cart-tab__link">Подтверждение заказа</a></li>
+    </ul>
+</div>
+<!--<div class="b-cart-tab__tab">
+    <div class="b-cart__content">
+        <div class="b-cart__text">
+            <p>В интернет-магазине Optima Fitness доступны следующие виды доставки</p>
+        </div>
+        <div class="b-cart__var-list">
+            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Самовывоз</label>
+            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по Москве</label>
+            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по России</label>
+        </div>
+    </div>
+</div> -->
+<!--<div class="b-cart-tab__tab">
+    <div class="b-cart__content">
+        <div class="b-cart__text">
+            <p>Для оформления заказа заполните следующие поля. Поля отмеченные звездочкой (*) являются обязательными:</p>
+        </div>
+        <div class="b-form b-form_cart">
+            <table class="b-form__table">
+                <tr>
+                    <td><label for="bc-lastname" class="b-form__label">Фамилия:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-lastname"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-firstname" class="b-form__label">Имя:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-firstname"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-midname" class="b-form__label">Отчество:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-midname"><span class="b-form__help">нужны для документов о покупке</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-tel" class="b-form__label">Телефон (код) 123-45-65:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-tel"><span class="b-form__help">если возникнут вопросы по доставке</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-email" class="b-form__label">E-mail:</label></td>
+                    <td><input type="text" class="b-form__text" id="bc-email"><span class="b-form__help">мы отправим вам информацию о заказе</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-city" class="b-form__label">Город:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-city"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-street" class="b-form__label">Улица:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-street"><span class="b-form__help">адрес куда доставить заказ</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-build" class="b-form__label">Дом:<sup class="b-form__required">*</sup></label></td>
+                    <td><input type="text" class="b-form__text" id="bc-build"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="bc-build" class="b-form__label">Квартира:</label></td>
+                    <td>
+                        <div class="row">
+                            <div class="span3"><input type="text" class="b-form__text b-form__text_short" id="bc-build"><span class="b-form__help">номер дома</span></div>
+                            <div class="span3 rnd_right"><label for="bc-build2" class="b-form__label">Корпус:</label></div>
+                            <div class="span3"><input type="text" class="b-form__text b-form__text_short" id="bc-build2"><span class="b-form__help">корпус или строение</span></div>
+                        </div>
+                        </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="text" class="b-form__text b-form__text_short" id="bc-room"><span class="b-form__help">номер квартиры или офиса</span></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>-->
+<!--<div class="b-cart-tab__tab">
+    <div class="b-cart__content">
+        <div class="b-cart__text">
+            <p>В интернет-магазине OptimaFitness доступны следующие типы оплаты:</p>
+        </div>
+        <div class="b-cart__var-list">
+            <label class="b-cart__var-list-label"><input type="radio" name="pay-type" class="b-cart__var-list-input">Безналичный расчёт</label>
+            <label class="b-cart__var-list-label"><input type="radio" name="pay-type" class="b-cart__var-list-input">Оплата банковской картой онлайн</label>
+            <label class="b-cart__var-list-label"><input type="radio" name="pay-type" class="b-cart__var-list-input">Наличными</label>
+        </div>
+    </div>
+</div> -->
+<!--<div class="b-cart-tab__tab">
+    <div class="b-cart__content">
+        <div class="b-cart__text">
+            <p>В интернет-магазине Optima Fitness доступны следующие виды доставки</p>
+        </div>
+        <div class="b-cart__var-list">
+            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Самовывоз</label>
+            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по Москве</label>
+            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по России</label>
+        </div>
+    </div>
+</div> -->
+<div class="b-cart-tab__tab">
+    <div class="b-cart__content">
+        <table class="b-cart__fintbl">
+            <thead>
+            <tr>
+                <th class="b-cart__fintbl-namecol">Наименование товара</th>
+                <th class="b-cart__fintbl-pricecol">Цена</th>
+                <th class="b-cart__fintbl-countcol">Количество</th>
+                <th class="b-cart__fintbl-sumcol">Сумма</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="b-cart__fintbl-namecol">
+                    <a class="b-cart__fintbl-item" href="#"
+                       title="Беговая дорожка Optima Беговая дорожка Очень длинное название товара ла ла ла">
+                        <img src="images/content/cart-item_89x96.jpg" alt="Беговая дорожка Optima" width="48"
+                             height="52" class="b-cart__fintbl-img">
+                        <span class="b-cart__fintbl-name">Беговая дорожка Optima Беговая дорожка Очень длинное название товара ла ла ла</span>
+                    </a>
+                </td>
+                <td>18 535 руб</td>
+                <td>1</td>
+                <td>18 535 руб</td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="b-cart__fintbl-item" href="#" title="Беговая дорожка Optima">
+                        <img src="images/content/cart-item_89x96.jpg" alt="Беговая дорожка Optima" width="48"
+                             height="52" class="b-cart__fintbl-img">
+                        <span class="b-cart__fintbl-name">Беговая дорожка Optima</span>
+                    </a>
+                </td>
+                <td>18 535 руб</td>
+                <td>1</td>
+                <td>18 535 руб</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="b-cart__fintotal">
+            <div class="row">
+                <div class="span6"><p>Для передачи ваших персональных данных в банк на обработку, Вам необходимо
+                    согласиться с тем,что OptimaFitness.ru передаст ваши персональные данные в банк "Русский стандарт"
+                    на обработку. Для этого необходимо поставить галочку напротив "Я согласен передать данные в банк",
+                    ниже на странице. И нажать "Закончить оформление"</p></div>
+                <div class="span3">
+                    <div class="b-cart__fintotal-sum">Итого: 18 535 руб</div>
+                    <label class="b-form__label b-form__label_cart"><input type="checkbox" class="b-form__checkbox">Я
+                        согласен передать данные в банк.</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <h2 class="rnd__dectitle">адрес доставки</h2>
+                <table class="b-cart__infotbl">
+                    <tr>
+                        <td><strong>Фамилия:</strong></td>
+                        <td>Константинопольский</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Имя:</strong></td>
+                        <td>Владимир</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Отчество:</strong></td>
+                        <td>Владимирович</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Телефон:</strong></td>
+                        <td>(123) 123-45-65</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E-mail:</strong></td>
+                        <td>konstantinopolskiy.vlad@mail.ru</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Город:</strong></td>
+                        <td>Ростов на Дону</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Улица:</strong></td>
+                        <td>XX съезда Компартии СССР</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Дом:</strong></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Корпус:</strong></td>
+                        <td>123</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Квартира:</strong></td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="span5">
+                <h2 class="rnd__dectitle">Способ оплаты / доставки</h2>
+                <table class="b-cart__infotbl">
+                    <tr>
+                        <td>Безналичный расчёт</td>
+                    </tr>
+                    <tr>
+                        <td>Самовывоз</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-cart__bottom">
+    <div class="row_8">
+        <div class="span4">
+            <button class="rnd__button rnd__button_blue">Вернуться</button>
+        </div>
+        <div class="span4 rnd_right">
+            <button class="rnd__button">Далее</button>
+            <button class="rnd__button">закончить оформление</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<footer class="b-footer clearfix">
+    <div class="container">
+        <div class="row_8">
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">О нас</h2>
+                    <ul class="b-widget__menu">
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">еще наши сайты</h2>
+                    <ul class="b-widget__menu">
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">Служба поддержки</h2>
+                    <ul class="b-widget__menu">
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">социальные сети</h2>
+
+                    <div class="b-widget__social">
+                        <a href="#" class="b-widget__social-icon icon-1" title="FaceBook"></a>
+                        <a href="#" class="b-widget__social-icon icon-2" title="VKontakte"></a>
+                        <a href="#" class="b-widget__social-icon icon-3" title="GooglePlus"></a>
+                        <a href="#" class="b-widget__social-icon icon-4" title="Odnoklasniki"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-footer__bottom">
+            <div class="row_8">
+                <div class="span6">
+                    <div class="b-footer__copyrights">&copy; 2014 Все права защищены. Optima Fitness</div>
+                </div>
+                <div class="span2">
+                    <div class="b-created">
+                        <a target="_blank" href="//mymediapro.ru" class="b-created__link">Создание сайта:</a>
+                        <a target="_blank" href="//mymediapro.ru" class="b-created__link"><img src="images/mmplogo.svg"
+                                                                                               alt="Optima Fitness"
+                                                                                               class="b-created__img"
+                                                                                               width="114" height="25"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

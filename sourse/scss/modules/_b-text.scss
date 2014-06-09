@@ -1,0 +1,9 @@
+.b-text {
+    p {
+        color: #454545;
+        $font-size: 14;
+        font-size: em($font-size);
+        line-height: em(24, $font-size);
+        padding: em(8, $font-size) 0;
+    }
+}

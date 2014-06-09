@@ -1,0 +1,75 @@
+.rnd {
+    &_right {
+        text-align: right;
+    }
+    &__button {
+        $font-size: 16;
+        border-radius: 3px;
+        background-color: #0e9a25;
+        background: linear-gradient(to bottom, rgba(17, 177, 46, 1) 0%, rgba(16, 169, 42, 1) 22%, rgba(12, 139, 32, 1) 71%, rgba(11, 131, 29, 1) 90%, rgba(9, 92, 21, 1) 93%, rgba(9, 92, 21, 1) 100%);
+        border: 0;
+        display: inline-block;
+        font-size: em($font-size);
+        font-family: $second-font;
+        font-weight: 500;
+        padding: em(9, $font-size) em(38, $font-size);
+        line-height: $base__line-height;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            background: linear-gradient(to bottom, rgba(9, 92, 21, 1) 0%, rgba(9, 92, 21, 1) 7%, rgba(11, 131, 29, 1) 10%, rgba(12, 139, 32, 1) 29%, rgba(16, 169, 42, 1) 78%, rgba(17, 177, 46, 1) 100%);
+        }
+        &_blue {
+            background-color: #0076a3;
+            background: linear-gradient(to bottom, rgba(0, 145, 184, 1) 0%, rgba(0, 138, 179, 1) 17%, rgba(0, 104, 152, 1) 66%, rgba(0, 92, 142, 1) 90%, rgba(9, 69, 101, 1) 93%, rgba(9, 69, 101, 1) 100%);
+            &:hover {
+                background: linear-gradient(to bottom, rgba(9, 69, 101, 1) 0%, rgba(9, 69, 101, 1) 7%, rgba(0, 92, 142, 1) 10%, rgba(0, 104, 152, 1) 34%, rgba(0, 138, 179, 1) 83%, rgba(0, 145, 184, 1) 100%);
+            }
+        }
+    }
+    &__dectitle {
+        $font-size: 24;
+        color: #454545;
+        font-family: $second-font;
+        font-size: em($font-size);
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0 0 em(25, $font-size) em(17, $font-size);
+        position: relative;
+        &:before {
+            content: " ";
+            display: block;
+            width: em(7, $font-size);
+            height: em(25, $font-size);
+            background: #ef592c;
+            position: absolute;
+            top: em(3, $font-size);
+            left: 0;
+
+        }
+    }
+    &__list {
+        padding-bottom: em(10);
+        li {
+            font-size: em(14);
+            color: #464646;
+            padding: em(1, 14) 0;
+            display: block;
+        }
+    }
+
+    &__item-label {
+        display: inline-block;
+        width: 61px;
+        height: 61px;
+        background: url(../images/sprite2.png) no-repeat 0 0;
+        &_sale {
+            background-position: 0 -61px;
+        }
+        &_recomend {
+            background-position: 0 -122px;
+        }
+    }
+}

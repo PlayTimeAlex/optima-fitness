@@ -1,0 +1,39 @@
+.b-widget {
+    &__title {
+        font-size: em(16);
+        color: $white;
+        font-family: $second-font;
+        font-weight: 900;
+        text-transform: uppercase;
+        padding-bottom: em(28, 16);
+    }
+    &__menu-item {
+        list-style: none;
+        padding-bottom: em(7);
+    }
+    &__menu-link {
+        font-size: em(14);
+        color: $white;
+    }
+    &__social-icon {
+        display: inline-block;
+        font-size: em(29);
+        margin-right: em(20, 29);
+
+    }
+    &__smenu {
+        &-link {
+            font-size: em(14);
+            line-height: 1;
+            transition: color 0.3s ease;
+            &_current, &:hover {
+                color: #ef592c;
+            }
+        }
+        &-item {
+            list-style: none;
+            padding: em(11) 0;
+        }
+    }
+
+}

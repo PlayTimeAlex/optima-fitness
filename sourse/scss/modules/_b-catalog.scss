@@ -1,0 +1,43 @@
+.b-catalog {
+
+    &__title {
+        font-size: em(24);
+        font-family: $second-font;
+        font-weight: 300;
+        color: #464646;
+        padding-bottom: em(47, 24);
+        &-tm {
+            color: #f26522;
+            font-weight: 700;
+        }
+    }
+    &__item {
+        border-bottom: 3px solid #d0d0d0;
+        padding: 0 0 em(23);
+    }
+    &__label {
+        text-align: center;
+    }
+    &__old-price {
+        font-size: em(14);
+        color: #898989;
+        font-family: $second-font;
+        padding: em(18, 24) 0 em(1, 24);
+    }
+    &__price {
+        color: #f26522;
+        font-family: $second-font;
+        font-size: em(24);
+        font-weight: 700;
+    }
+    &__stock {
+        color: #588527;
+        font-size: em(14);
+        &_no {
+            color: #e41212;;
+        }
+    }
+    &__incart {
+        margin-top: em(10);
+    }
+}

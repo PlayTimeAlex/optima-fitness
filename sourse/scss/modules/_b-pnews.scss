@@ -1,0 +1,33 @@
+.b-pnews {
+    padding-bottom: em(58);
+    &__img {
+        display: block;
+        float: left;
+        margin: 0 em(17) 0 0;
+    }
+    &__text {
+        overflow: hidden;
+    }
+    &__title {
+        font-family: $second-font;
+        font-size: em(28);
+        font-weight: 300;
+        line-height: 1;
+        padding: 0 0 em(26, 28);
+    }
+    &__date {
+        color: #888;
+        font-size: em(14);
+        font-style: italic;
+        padding: 0 0 em(19, 14);
+        display: block;
+
+    }
+    &_small &__title {
+        font-size: em(18);
+        padding-bottom: em(12, 18);
+    }
+    &_small &__date {
+        padding-bottom: em(12, 14);
+    }
+}

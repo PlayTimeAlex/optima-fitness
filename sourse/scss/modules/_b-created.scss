@@ -1,0 +1,14 @@
+.b-created {
+    float: right;
+    padding-right: em(36);
+    &__link {
+        font-size: em(12);
+        color: $white;
+        text-decoration: none;
+    }
+    &__img {
+        display: block;
+        max-width: 100%;
+        margin-top: em(6);
+    }
+}

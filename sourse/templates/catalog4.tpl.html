@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="stylesheet" href="css/style.min.css" media="all"/>
+    <script src="js/all.min.js"></script>
+    <!--[if lte IE 8 ]>
+    <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
+</head>
+<body>
+@@include('blocks/_b-header.html')
+@@include('blocks/_b-breadcrumb.html')
+<div class="b-page">
+    <div class="container">
+        <h2 class="b-page__title">КАТАЛОГ</h2>
+
+        <div class="row_8">
+            <div class="span4">
+                <div class="b-catalog__item">
+                    <h2 class="b-catalog__title">Эллиптический тренажер <span
+                            class="b-catalog__title-tm">OptiCross 21</span></h2>
+
+                    <div class="row_8">
+                        <div class="span4">
+                            <img src="images/content/cat-item_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                                 class="b-catalog__img"/>
+
+                            <div class="b-rating" data-score="4"></div>
+                            <div class="b-catalog__label">
+                                <span class="rnd__item-label"></span>
+                                <span class="rnd__item-label rnd__item-label_sale"></span>
+                                <span class="rnd__item-label _sale rnd__item-label_recomend"></span>
+                            </div>
+                        </div>
+
+                        <div class="span4">
+                            <ul class="rnd__list rnd__list_check">
+                                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                                <li>Наклон: <strong>0-15</strong>%</li>
+                                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+                            </ul>
+                            <div class="b-catalog__old-price">400 000 руб</div>
+                            <div class="b-catalog__price">535 000 руб</div>
+                            <div class="b-catalog__stock b-catalog__stock_no">Нет в наличии</div>
+                            <button class="rnd__button rnd__button_blue b-catalog__incart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+
+            </div>
+        </div>
+        <div class="row_8">
+            <div class="span4">
+                @@include('blocks/_paginator.html')
+            </div>
+            <div class="span4">
+                @@include('blocks/_item-count.html', {
+                "text": "Показать количество товаров на странице:"
+                })
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

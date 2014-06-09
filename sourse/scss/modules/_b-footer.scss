@@ -1,0 +1,14 @@
+.b-footer {
+    padding: em(54) 0 em(28);
+    background: #464e52 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAElBMVEU+RUlCSU1CSU5FTVJGTVJJUVaCQWEQAAAAHklEQVQI12MwdA1lEBANZTA0DWUIDRFhCA1kBNIqADF3BDLivK9DAAAAAElFTkSuQmCC);
+    &__bottom {
+        border-top: 1px solid #c4c4c4;
+        margin-top: em(30);
+        padding-top: em(16);
+    }
+    &__copyrights {
+        font-size: em(12);
+        color: $white;
+        padding-top: em(16, 12);
+    }
+}

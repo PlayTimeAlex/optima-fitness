@@ -1,0 +1,31 @@
+$base__font: Arial, Helvetica, sans-serif;
+$base__color: #555555;
+$base__font-size: 10;
+$base__line-height: 1.5;
+$base__background: #fff;
+$base__link-color: #0076a3;
+$white: #fff;
+$second-font: 'Roboto', sans-serif;
+
+@function em($px, $base: $base__font-size) {
+    @return ($px / $base) *1em;
+}
+
+/*grid*/
+$cols: 9;
+$gutter: 1.8367346938776%;
+
+$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
+
+@mixin cols($num) {
+    width: ($one_col * $num) + ($gutter * ($num - 1));
+}
+
+@mixin offset($num, $first) {
+    @if $first == true {
+        margin-left: ($one_col * $num) + ($gutter * $num);
+    } @else {
+        margin-left: ($one_col * $num) + ($gutter * ($num + 1));
+    }
+
+}

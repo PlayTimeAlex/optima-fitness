@@ -1,0 +1,69 @@
+.b-form {
+    &__text {
+        $font-size: 14;
+        box-sizing: border-box;
+        border: 1px solid #d2d2d2;
+        font-size: em($font-size);
+        color: #464646;
+        padding: 0 em(10);
+        height: em(33, $font-size);
+        display: inline-block;
+        width: 100%;
+        transition: box-shadow 0.3s ease;
+        font-family: $base__font;
+        &_search {
+            padding-right: em(20);
+        }
+        &_short {
+            width: em(95, $font-size);
+        }
+    }
+    &__text:focus {
+        box-shadow: 0 0 5px #0076a3;
+    }
+    &__label {
+        color: #454545;
+        font-size: em(14);
+        font-weight: bold;
+        display: inline-block;
+        padding-right: em(19);
+        padding-top: em(5);
+        &_cart {
+            font-weight: normal;
+            display: block;
+            padding: em(25, 14) 0 0;
+        }
+    }
+    &__table {
+        width: 100%;
+        td {
+            padding-bottom: em(14);
+            &:first-child {
+                width: em(225);
+                vertical-align: top;
+            }
+            &:nth-child(2) {
+                width: em(310);
+            }
+        }
+    }
+    &__required {
+        color: #ef592c;
+        font-size: em(18, 14);
+        margin-top: - em(18,14);
+        display: inline-block;
+    }
+    &__help {
+        display: block;
+        font-size: em(12);
+        color: #898989;
+        font-style: italic;
+    }
+    &_cart {
+        padding-top: em(37);
+    }
+    &__checkbox {
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width">-->
+    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="stylesheet" href="css/style.min.css" media="all"/>
+    <script src="js/all.min.js"></script>
+    <!--[if lte IE 8 ]>
+    <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
+</head>
+<body>
+@@include('blocks/_b-header.html')
+@@include('blocks/_b-breadcrumb.html')
+<div class="b-page">
+    <div class="container">
+        <div class="row_8">
+            <div class="span5">
+                <h2 class="b-page__title">О НАС</h2>
+            </div>
+            <div class="span3">
+                @@include('blocks/_item-count.html', {
+                "classmod": "b-item-count_single",
+                "text": "Количество новостей на странице:"
+                })
+            </div>
+        </div>
+        <div class="row_8">
+            <div class="span2">
+                <aside class="b-page__sidebar">
+                    @@include('blocks/_smenu.html')
+                </aside>
+            </div>
+            <div class="span6">
+                <article class="b-pnews">
+                    <h2 class="b-pnews__title"><a href="news_item.html">Заголовок новости с превьюшкой</a></h2>
+                    <time class="b-pnews__date" datetime="2014-01-18">18 января 2014</time>
+                    <div class="b-pnews__content">
+                        <img src="images/content/news-prev_107x107.jpg" alt="Заголовок новости с превьюшкой"
+                             class="b-pnews__img" width="107" height="107">
+
+                        <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
+                            чем астатический установившийся режим, пользуясь последними системами уравнений. Под
+                            воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
+                            более сложной системе дифференциальных уравнений, если добавить дифференциальный</p></div>
+                    </div>
+                </article>
+                <article class="b-pnews">
+                    <h2 class="b-pnews__title"><a href="news_item.html">Заголовок новости без превьюшкой</a></h2>
+                    <time class="b-pnews__date" datetime="2014-01-18">18 января 2014</time>
+                    <div class="b-pnews__content">
+                        <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
+                            чем астатический установившийся режим, пользуясь последними системами уравнений. Под
+                            воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
+                            более сложной системе дифференциальных уравнений, если добавить дифференциальный</p></div>
+                    </div>
+                </article>
+                <article class="b-pnews">
+                    <h2 class="b-pnews__title"><a href="news_item.html">Заголовок новости с превьюшкой</a></h2>
+                    <time class="b-pnews__date" datetime="2014-01-18">18 января 2014</time>
+                    <div class="b-pnews__content">
+                        <img src="images/content/news-prev_107x107.jpg" alt="Заголовок новости с превьюшкой"
+                             class="b-pnews__img" width="107" height="107">
+
+                        <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
+                            чем астатический установившийся режим, пользуясь последними системами уравнений. Под
+                            воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
+                            более сложной системе дифференциальных уравнений, если добавить дифференциальный</p></div>
+                    </div>
+                </article>
+                <article class="b-pnews">
+                    <h2 class="b-pnews__title"><a href="news_item.html">Заголовок новости без превьюшкой</a></h2>
+                    <time class="b-pnews__date" datetime="2014-01-18">18 января 2014</time>
+                    <div class="b-pnews__content">
+                        <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
+                            чем астатический установившийся режим, пользуясь последними системами уравнений. Под
+                            воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
+                            более сложной системе дифференциальных уравнений, если добавить дифференциальный</p></div>
+                    </div>
+                </article>
+                <div class="row_8">
+                    <div class="span4">
+                        <article class="b-pnews b-pnews_small">
+                            <h2 class="b-pnews__title"><a href="news_item.html">Заголовок новости без превьюшкой</a>
+                            </h2>
+                            <time class="b-pnews__date" datetime="2014-01-18">18 января 2014</time>
+                            <div class="b-pnews__content">
+                                <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию
+                                    на оси, чем астатический установившийся режим, пользуясь последними системами
+                                    уравнений.</p></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="span4">
+                        <article class="b-pnews b-pnews_small">
+                            <h2 class="b-pnews__title"><a href="news_item.html">Заголовок новости без превьюшкой</a>
+                            </h2>
+                            <time class="b-pnews__date" datetime="2014-01-18">18 января 2014</time>
+                            <div class="b-pnews__content">
+                                <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию
+                                    на оси, чем астатический установившийся режим, пользуясь последними системами
+                                    уравнений.</p></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                @@include('blocks/_paginator.html')
+
+                @@include('blocks/_item-count.html', {
+                "classmod": "b-item-count_single",
+                "text": "Количество новостей на странице:"
+                })
+
+            </div>
+        </div>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')
+</body>
+</html>
