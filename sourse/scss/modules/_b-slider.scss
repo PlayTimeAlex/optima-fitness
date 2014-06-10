@@ -1,0 +1,12 @@
+.b-slider{
+    overflow: hidden;
+    position: relative;
+    &_page-img{
+        margin: em(50) 0;
+        text-align: center;
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

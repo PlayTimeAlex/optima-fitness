@@ -3,14 +3,14 @@
 <head>
     <title>Index</title>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width">-->
-    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.min.css" media="all"/>
-    <script src="js/all.min.js"></script>
+    <script src="js/all.js"></script>
     <!--[if lte IE 8 ]>
     <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
 </head>
 <body>
+<div class="wrap">
 <header class="b-header">
     <div class="b-header__top">
         <div class="container">
@@ -29,9 +29,10 @@
                             </select>
                         </div>
                         <div class="b-header__tel"><span class="b-header__tel-code">+7 (495) </span>221-2595</div>
-                        <a class="b-header__rcall">обратный звонок</a>
+                        <a class="b-header__rcall colorbox-inline" href="#rcall">обратный звонок</a>
                     </div>
                     <div class="b-header__cart">
+                        <a class="b-header__cart-link" href="#incart" title="В корзину"></a>
                         <div class="b-header__cart-icon icon-5"><span class="b-header__cart-count">10</span></div>
                         на сумму: <span class="b-header__cart-sum">200 000.00</span> руб
                     </div>
@@ -86,27 +87,23 @@
 </div>
 <div class="b-page">
     <div class="container">
-        <h2 class="b-page__title">КАТАЛОГ</h2>
-
+        <h1 class="b-page__title">КАТАЛОГ</h1>
         <div class="row_8">
             <div class="span4">
                 <div class="b-catalog__item">
                     <h2 class="b-catalog__title">Эллиптический тренажер <span
                             class="b-catalog__title-tm">OptiCross 21</span></h2>
-
                     <div class="row_8">
                         <div class="span4">
                             <img src="images/content/cat-item_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
                                  class="b-catalog__img"/>
-
                             <div class="b-rating" data-score="4"></div>
                             <div class="b-catalog__label">
                                 <span class="rnd__item-label"></span>
                                 <span class="rnd__item-label rnd__item-label_sale"></span>
-                                <span class="rnd__item-label _sale rnd__item-label_recomend"></span>
+                                <span class="rnd__item-label_sale rnd__item-label_recomend"></span>
                             </div>
                         </div>
-
                         <div class="span4">
                             <ul class="rnd__list rnd__list_check">
                                 <li>Мощность двигателя: <strong>2,6</strong> ps</li>
@@ -124,7 +121,6 @@
                 </div>
             </div>
             <div class="span4">
-
             </div>
         </div>
         <div class="row_8">
@@ -151,6 +147,85 @@
         </div>
     </div>
 </div>
+<footer class="b-footer clearfix">
+    <div class="container">
+        <div class="row_8">
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">О нас</h2>
+                    <ul class="b-widget__menu">
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">еще наши сайты</h2>
+                    <ul class="b-widget__menu">
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">Служба поддержки</h2>
+                    <ul class="b-widget__menu">
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="b-widget">
+                    <h2 class="b-widget__title">социальные сети</h2>
 
+                    <div class="b-widget__social">
+                        <a href="#" class="b-widget__social-icon icon-1" title="FaceBook"></a>
+                        <a href="#" class="b-widget__social-icon icon-2" title="VKontakte"></a>
+                        <a href="#" class="b-widget__social-icon icon-3" title="GooglePlus"></a>
+                        <a href="#" class="b-widget__social-icon icon-4" title="Odnoklasniki"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-footer__bottom">
+            <div class="row_8">
+                <div class="span6">
+                    <div class="b-footer__copyrights">&copy; 2014 Все права защищены. Optima Fitness</div>
+                </div>
+                <div class="span2">
+                    <div class="b-created">
+                        <a target="_blank" href="//mymediapro.ru" class="b-created__link">Создание сайта:</a>
+                        <a target="_blank" href="//mymediapro.ru" class="b-created__link"><img src="images/mmplogo.svg"
+                                                                                               alt="Optima Fitness"
+                                                                                               class="b-created__img"
+                                                                                               width="114" height="25"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <div style="display:none;">
+            <div class="b-popup" id="rcall">
+                <h2 class="b-popup__title">заказать обратный звонок</h2>
+                <form action="/">
+                    <div class="row row_8">
+                        <div class="span4">
+                            <input class="b-form__text" type="text" placeholder="Ваше имя"/>
+                        </div>
+                        <div class="span4">
+                            <input class="b-form__text b-form__text_tel" type="tel" placeholder="Ваш телефон"/>
+                        </div>
+                    </div>
+                    <div class="b-popup__submit">
+                        <button type="submit" class="rnd__button rnd__button_blue rnd__button_small">отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
 </body>
 </html>

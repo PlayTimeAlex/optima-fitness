@@ -1,16 +1,17 @@
 /*
- * jQuery Form Styler v1.5.1
+ * jQuery Form Styler v1.5.3.2
  * https://github.com/Dimox/jQueryFormStyler
  *
  * Copyright 2012-2014 Dimox (http://dimox.name/)
  * Released under the MIT license.
  *
- * Date: 2014.05.03
+ * Date: 2014.06.07
  *
  */
 
-(function ($) {
-    $.fn.styler = function (opt) {
+(function($) {
+
+    $.fn.styler = function(options) {
 
         var opt = $.extend({
             wrapper: 'form',
@@ -24,28 +25,25 @@
             selectVisibleOptions: 0,
             singleSelectzIndex: '100',
             selectSmartPositioning: true,
-            onSelectOpened: function () {
-            },
-            onSelectClosed: function () {
-            },
-            onFormStyled: function () {
-            }
-        }, opt);
+            onSelectOpened: function() {},
+            onSelectClosed: function() {},
+            onFormStyled: function() {}
+        }, options);
 
-        return this.each(function () {
+        return this.each(function() {
             var el = $(this);
 
-            function attributes() {
+            function Attributes() {
                 var id = '',
                     title = '',
                     classes = '',
                     dataList = '';
-                if (el.attr('id') !== undefined && el.attr('id') != '') id = ' id="' + el.attr('id') + opt.idSuffix + '"';
-                if (el.attr('title') !== undefined && el.attr('title') != '') title = ' title="' + el.attr('title') + '"';
-                if (el.attr('class') !== undefined && el.attr('class') != '') classes = ' ' + el.attr('class');
+                if (el.attr('id') !== undefined && el.attr('id') !== '') id = ' id="' + el.attr('id') + opt.idSuffix + '"';
+                if (el.attr('title') !== undefined && el.attr('title') !== '') title = ' title="' + el.attr('title') + '"';
+                if (el.attr('class') !== undefined && el.attr('class') !== '') classes = ' ' + el.attr('class');
                 var data = el.data();
-                for (var i in data) {
-                    if (data[i] != '') dataList += ' data-' + i + '="' + data[i] + '"';
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i] !== '') dataList += ' data-' + i + '="' + data[i] + '"';
                 }
                 id += dataList;
                 this.id = id;
@@ -55,12 +53,12 @@
 
             // checkbox
             if (el.is(':checkbox')) {
-                el.each(function () {
+                el.each(function() {
                     if (el.parent('div.jq-checkbox').length < 1) {
 
-                        function checkbox() {
+                        var checkboxOutput = function() {
 
-                            var att = new attributes();
+                            var att = new Attributes();
                             var checkbox = $('<div' + att.id + ' class="jq-checkbox' + att.classes + '"' + att.title + '><div class="jq-checkbox__div"></div></div>');
 
                             // прячем оригинальный чекбокс
@@ -87,7 +85,7 @@
                             if (el.is(':disabled')) checkbox.addClass('disabled');
 
                             // клик на псевдочекбокс
-                            checkbox.click(function () {
+                            checkbox.on('click.styler', function() {
                                 if (!checkbox.is('.disabled')) {
                                     if (el.is(':checked')) {
                                         el.prop('checked', false);
@@ -103,34 +101,34 @@
                                 }
                             });
                             // клик на label
-                            el.closest('label').add('label[for="' + el.attr('id') + '"]').click(function (e) {
+                            el.closest('label').add('label[for="' + el.attr('id') + '"]').click(function(e) {
                                 checkbox.click();
                                 e.preventDefault();
                             });
                             // переключение по Space или Enter
-                            el.change(function () {
+                            el.on('change.styler', function() {
                                 if (el.is(':checked')) checkbox.addClass('checked');
                                 else checkbox.removeClass('checked');
                             })
                                 // чтобы переключался чекбокс, который находится в теге label
-                                .keydown(function (e) {
+                                .on('keydown.styler', function(e) {
                                     if (e.which == 32) checkbox.click();
                                 })
-                                .focus(function () {
+                                .on('focus.styler', function() {
                                     if (!checkbox.is('.disabled')) checkbox.addClass('focused');
                                 })
-                                .blur(function () {
+                                .on('blur.styler', function() {
                                     checkbox.removeClass('focused');
-                                })
+                                });
 
-                        } // end checkbox()
+                        }; // end checkboxOutput()
 
-                        checkbox();
+                        checkboxOutput();
 
                         // обновление при динамическом изменении
-                        el.on('refresh', function () {
-                            el.parent().before(el).remove();
-                            checkbox();
+                        el.on('refresh', function() {
+                            el.off('.styler').parent().before(el).remove();
+                            checkboxOutput();
                         });
 
                     }
@@ -139,12 +137,12 @@
 
                 // radio
             } else if (el.is(':radio')) {
-                el.each(function () {
+                el.each(function() {
                     if (el.parent('div.jq-radio').length < 1) {
 
-                        function radio() {
+                        var radioOutput = function() {
 
-                            var att = new attributes();
+                            var att = new Attributes();
                             var radio = $('<div' + att.id + ' class="jq-radio' + att.classes + '"' + att.title + '><div class="jq-radio__div"></div></div>');
 
                             // прячем оригинальную радиокнопку
@@ -170,7 +168,7 @@
                             if (el.is(':disabled')) radio.addClass('disabled');
 
                             // клик на псевдорадиокнопке
-                            radio.click(function () {
+                            radio.on('click.styler', function() {
                                 if (!radio.is('.disabled')) {
                                     radio.closest(opt.wrapper).find('input[name="' + el.attr('name') + '"]').prop('checked', false).parent().removeClass('checked');
                                     el.prop('checked', true).parent().addClass('checked');
@@ -181,29 +179,29 @@
                                 }
                             });
                             // клик на label
-                            el.closest('label').add('label[for="' + el.attr('id') + '"]').click(function (e) {
+                            el.closest('label').add('label[for="' + el.attr('id') + '"]').click(function(e) {
                                 radio.click();
                                 e.preventDefault();
                             });
                             // переключение стрелками
-                            el.change(function () {
+                            el.on('change.styler', function() {
                                 el.parent().addClass('checked');
                             })
-                                .focus(function () {
+                                .on('focus.styler', function() {
                                     if (!radio.is('.disabled')) radio.addClass('focused');
                                 })
-                                .blur(function () {
+                                .on('blur.styler', function() {
                                     radio.removeClass('focused');
-                                })
+                                });
 
-                        } // end radio()
+                        }; // end radioOutput()
 
-                        radio();
+                        radioOutput();
 
                         // обновление при динамическом изменении
-                        el.on('refresh', function () {
-                            el.parent().before(el).remove();
-                            radio();
+                        el.on('refresh', function() {
+                            el.off('.styler').parent().before(el).remove();
+                            radioOutput();
                         });
 
                     }
@@ -222,46 +220,54 @@
                     opacity: 0,
                     margin: 0,
                     padding: 0
-                }).each(function () {
+                }).each(function() {
                     if (el.parent('div.jq-file').length < 1) {
 
-                        function file() {
+                        var fileOutput = function() {
 
-                            var att = new attributes();
+                            var att = new Attributes();
                             var file = $('<div' + att.id + ' class="jq-file' + att.classes + '"' + att.title + ' style="display: inline-block; position: relative; overflow: hidden"></div>');
                             var name = $('<div class="jq-file__name">' + opt.filePlaceholder + '</div>').appendTo(file);
                             var browse = $('<div class="jq-file__browse">' + opt.fileBrowse + '</div>').appendTo(file);
                             el.after(file);
                             file.append(el);
                             if (el.is(':disabled')) file.addClass('disabled');
-                            el.change(function () {
-                                name.text(el.val().replace(/.+[\\\/]/, ''));
-                                if (el.val() == '') {
+                            el.on('change.styler', function() {
+                                var value = el.val();
+                                if (el.is('[multiple]')) {
+                                    value = '';
+                                    var files = el[0].files;
+                                    for (var i = 0; i < files.length; i++) {
+                                        value += ( (i > 0) ? ', ' : '' ) + files[i].name;
+                                    }
+                                }
+                                name.text(value.replace(/.+[\\\/]/, ''));
+                                if (value === '') {
                                     name.text(opt.filePlaceholder);
                                     file.removeClass('changed');
                                 } else {
                                     file.addClass('changed');
                                 }
                             })
-                                .focus(function () {
+                                .on('focus.styler', function() {
                                     file.addClass('focused');
                                 })
-                                .blur(function () {
+                                .on('blur.styler', function() {
                                     file.removeClass('focused');
                                 })
-                                .click(function () {
+                                .on('click.styler', function() {
                                     file.removeClass('focused');
-                                })
+                                });
 
-                        } // end file()
+                        }; // end fileOutput()
 
-                        file();
+                        fileOutput();
 
                         // обновление при динамическом изменении
-                        el.on('refresh', function () {
-                            el.parent().before(el).remove();
-                            file();
-                        })
+                        el.on('refresh', function() {
+                            el.off('.styler').parent().before(el).remove();
+                            fileOutput();
+                        });
 
                     }
                 });
@@ -269,21 +275,17 @@
 
                 // select
             } else if (el.is('select')) {
-                el.each(function () {
+                el.each(function() {
                     if (el.parent('div.jqselect').length < 1) {
 
-                        function selectbox() {
+                        var selectboxOutput = function() {
 
                             // запрещаем прокрутку страницы при прокрутке селекта
                             function preventScrolling(selector) {
-                                selector.off('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function (e) {
+                                selector.off('mousewheel DOMMouseScroll').on('mousewheel DOMMouseScroll', function(e) {
                                     var scrollTo = null;
-                                    if (e.type == 'mousewheel') {
-                                        scrollTo = (e.originalEvent.wheelDelta * -1);
-                                    }
-                                    else if (e.type == 'DOMMouseScroll') {
-                                        scrollTo = 40 * e.originalEvent.detail;
-                                    }
+                                    if (e.type == 'mousewheel') { scrollTo = (e.originalEvent.wheelDelta * -1); }
+                                    else if (e.type == 'DOMMouseScroll') { scrollTo = 40 * e.originalEvent.detail; }
                                     if (scrollTo) {
                                         e.stopPropagation();
                                         e.preventDefault();
@@ -315,15 +317,15 @@
 
                                     var data = option.eq(i).data();
                                     for (var k in data) {
-                                        if (data[k] != '') dataList += ' data-' + k + '="' + data[k] + '"';
+                                        if (data[k] !== '') dataList += ' data-' + k + '="' + data[k] + '"';
                                     }
 
-                                    li = '<li' + dataJqfsClass + dataList + ' class="' + liClass + optionClass + '">' + option.eq(i).text() + '</li>';
+                                    li = '<li' + dataJqfsClass + dataList + ' class="' + liClass + optionClass + '">'+ option.eq(i).text() +'</li>';
 
                                     // если есть optgroup
                                     if (option.eq(i).parent().is('optgroup')) {
                                         if (option.eq(i).parent().attr('class') !== undefined) optgroupClass = ' ' + option.eq(i).parent().attr('class');
-                                        li = '<li' + dataJqfsClass + ' class="' + liClass + optionClass + ' option' + optgroupClass + '">' + option.eq(i).text() + '</li>';
+                                        li = '<li' + dataJqfsClass + ' class="' + liClass + optionClass + ' option' + optgroupClass + '">'+ option.eq(i).text() +'</li>';
                                         if (option.eq(i).is(':first-child')) {
                                             li = '<li class="optgroup' + optgroupClass + '">' + option.eq(i).parent().attr('label') + '</li>' + li;
                                         }
@@ -335,7 +337,7 @@
 
                             // одиночный селект
                             function doSelect() {
-                                var att = new attributes();
+                                var att = new Attributes();
                                 var selectbox =
                                     $('<div' + att.id + ' class="jq-selectbox jqselect' + att.classes + '" style="display: inline-block; position: relative; z-index:' + opt.singleSelectzIndex + '">' +
                                         '<div class="jq-selectbox__select"' + att.title + ' style="position: relative">' +
@@ -377,7 +379,7 @@
                                 // определяем самый широкий пункт селекта
                                 var liWidth1 = 0,
                                     liWidth2 = 0;
-                                li.each(function () {
+                                li.each(function() {
                                     var l = $(this);
                                     l.css({'display': 'inline-block', 'white-space': 'nowrap'});
                                     if (l.innerWidth() > liWidth1) {
@@ -396,7 +398,7 @@
                                     divText.width(liWidth2);
                                     liWidth1 += selectbox.find('div.jq-selectbox__trigger').width();
                                 }
-                                if (liWidth1 > selectbox.width()) {
+                                if ( liWidth1 > selectbox.width() ) {
                                     dropdown.width(liWidth1);
                                 }
 
@@ -439,7 +441,7 @@
                                 }
 
                                 // при клике на псевдоселекте
-                                divSelect.click(function () {
+                                divSelect.click(function() {
                                     el.focus();
 
                                     // колбек при закрытии селекта
@@ -451,25 +453,25 @@
                                     var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
                                     if (iOS) return;
 
+                                    var liHeight = li.data('li-height');
+
                                     // умное позиционирование
                                     if (opt.selectSmartPositioning) {
                                         var win = $(window);
                                         var topOffset = selectbox.offset().top;
                                         var bottomOffset = win.height() - selectHeight - (topOffset - win.scrollTop());
                                         var visible = opt.selectVisibleOptions;
-                                        var liHeight = li.data('li-height');
-                                        var minHeight = liHeight * 5;
-                                        var newHeight = liHeight * visible;
+                                        var	minHeight = liHeight * 5;
+                                        var	newHeight = liHeight * visible;
                                         if (visible > 0 && visible < 6) minHeight = newHeight;
-                                        if (visible == 0) newHeight = 'auto';
+                                        if (visible === 0) newHeight = 'auto';
 
                                         // раскрытие вниз
-                                        if (bottomOffset > (minHeight + searchHeight + 20)) {
+                                        if (bottomOffset > (minHeight + searchHeight + 20))	{
                                             dropdown.height('auto').css({bottom: 'auto', top: position});
-                                            function maxHeightBottom() {
+                                            var maxHeightBottom = function() {
                                                 ul.css('max-height', Math.floor((bottomOffset - 20 - searchHeight) / liHeight) * liHeight);
-                                            }
-
+                                            };
                                             maxHeightBottom();
                                             ul.css('max-height', newHeight);
                                             if (isMaxHeight != 'none') {
@@ -482,10 +484,9 @@
                                             // раскрытие вверх
                                         } else {
                                             dropdown.height('auto').css({top: 'auto', bottom: position});
-                                            function maxHeightTop() {
+                                            var maxHeightTop = function() {
                                                 ul.css('max-height', Math.floor((topOffset - win.scrollTop() - 20 - searchHeight) / liHeight) * liHeight);
-                                            }
-
+                                            };
                                             maxHeightTop();
                                             ul.css('max-height', newHeight);
                                             if (isMaxHeight != 'none') {
@@ -518,7 +519,7 @@
                                     if (li.filter('.selected').length) {
                                         // если нечетное количество видимых пунктов,
                                         // то высоту пункта делим пополам для последующего расчета
-                                        if ((ul.innerHeight() / liHeight) % 2 != 0) liHeight = liHeight / 2;
+                                        if ( (ul.innerHeight() / liHeight) % 2 !== 0 ) liHeight = liHeight / 2;
                                         ul.scrollTop(ul.scrollTop() + li.filter('.selected').position().top - ul.innerHeight() / 2 + liHeight);
                                     }
 
@@ -526,9 +527,9 @@
                                     if (search.length) {
                                         search.val('').keyup();
                                         notFound.hide();
-                                        search.focus().keyup(function () {
+                                        search.keyup(function() {
                                             var query = $(this).val();
-                                            li.each(function () {
+                                            li.each(function() {
                                                 if (!$(this).html().match(new RegExp('.*?' + query + '.*?', 'i'))) {
                                                     $(this).hide();
                                                 } else {
@@ -548,19 +549,19 @@
                                 });
 
                                 // при наведении курсора на пункт списка
-                                li.hover(function () {
+                                li.hover(function() {
                                     $(this).siblings().removeClass('selected');
                                 });
                                 var selectedText = li.filter('.selected').text();
                                 var selText = li.filter('.selected').text();
 
                                 // при клике на пункт списка
-                                li.filter(':not(.disabled):not(.optgroup)').click(function () {
+                                li.filter(':not(.disabled):not(.optgroup)').click(function() {
                                     var t = $(this);
                                     var liText = t.text();
                                     if (selectedText != liText) {
                                         var index = t.index();
-                                        if (t.is('.option')) index -= t.prevAll('.optgroup').length;
+                                        index -= t.prevAll('.optgroup').length;
                                         t.addClass('selected sel').siblings().removeClass('selected sel');
                                         option.prop('selected', false).eq(index).prop('selected', true);
                                         selectedText = liText;
@@ -583,12 +584,12 @@
                                     opt.onSelectClosed.call(selectbox);
 
                                 });
-                                dropdown.mouseout(function () {
+                                dropdown.mouseout(function() {
                                     $('li.sel', dropdown).addClass('selected');
                                 });
 
                                 // изменение селекта
-                                el.change(function () {
+                                el.on('change.styler', function() {
                                     divText.html(option.filter(':selected').text());
                                     li.removeClass('selected sel').not('.optgroup').eq(el[0].selectedIndex).addClass('selected sel');
                                     // добавляем класс, показывающий изменение селекта
@@ -598,24 +599,25 @@
                                         selectbox.removeClass('changed');
                                     }
                                 })
-                                    .focus(function () {
+                                    .on('focus.styler', function() {
                                         selectbox.addClass('focused');
                                         $('div.jqselect').removeClass('opened');
                                     })
-                                    .blur(function () {
+                                    .on('blur.styler', function() {
                                         selectbox.removeClass('focused');
                                     })
                                     // изменение селекта с клавиатуры
-                                    .on('keydown keyup', function (e) {
+                                    .on('keydown.styler keyup.styler', function(e) {
+                                        var liHeight = li.data('li-height');
                                         divText.html(option.filter(':selected').text());
                                         li.removeClass('selected sel').not('.optgroup').eq(el[0].selectedIndex).addClass('selected sel');
-                                        // вверх, влево, PageUp
-                                        if (e.which == 38 || e.which == 37 || e.which == 33) {
-                                            dropdown.scrollTop(dropdown.scrollTop() + li.filter('.selected').position().top);
+                                        // вверх, влево, Page Up, Home
+                                        if (e.which == 38 || e.which == 37 || e.which == 33 || e.which == 36) {
+                                            ul.scrollTop(ul.scrollTop() + li.filter('.selected').position().top);
                                         }
-                                        // вниз, вправо, PageDown
-                                        if (e.which == 40 || e.which == 39 || e.which == 34) {
-                                            dropdown.scrollTop(dropdown.scrollTop() + li.filter('.selected').position().top - dropdown.innerHeight() + liHeight);
+                                        // вниз, вправо, Page Down, End
+                                        if (e.which == 40 || e.which == 39 || e.which == 34 || e.which == 35) {
+                                            ul.scrollTop(ul.scrollTop() + li.filter('.selected').position().top - ul.innerHeight() + liHeight);
                                         }
                                         // открываем выпадающий список при нажатии Space
                                         if (e.which == 32) {
@@ -633,7 +635,7 @@
                                     });
 
                                 // прячем выпадающий список при клике за пределами селекта
-                                $(document).on('click', function (e) {
+                                $(document).on('click', function(e) {
                                     // e.target.nodeName != 'OPTION' - добавлено для обхода бага в Opera на движке Presto
                                     // (при изменении селекта с клавиатуры срабатывает событие onclick)
                                     if (!$(e.target).parents().hasClass('jq-selectbox') && e.target.nodeName != 'OPTION') {
@@ -654,7 +656,7 @@
 
                             // мультиселект
                             function doMultipleSelect() {
-                                var att = new attributes();
+                                var att = new Attributes();
                                 var selectbox = $('<div' + att.id + ' class="jq-select-multiple jqselect' + att.classes + '"' + att.title + ' style="display: inline-block; position: relative"></div>');
 
                                 el.css({margin: 0, padding: 0}).after(selectbox);
@@ -697,7 +699,7 @@
                                 // если селект неактивный
                                 if (el.is(':disabled')) {
                                     selectbox.addClass('disabled');
-                                    option.each(function () {
+                                    option.each(function() {
                                         if ($(this).is(':selected')) li.eq($(this).index()).addClass('selected');
                                     });
 
@@ -705,40 +707,40 @@
                                 } else {
 
                                     // при клике на пункт списка
-                                    li.filter(':not(.disabled):not(.optgroup)').click(function (e) {
-                                        el.focus();
+                                    li.filter(':not(.disabled):not(.optgroup)').click(function(e) {
+                                        el.trigger('focus.styler');
                                         selectbox.removeClass('focused');
                                         var clkd = $(this);
-                                        if (!e.ctrlKey && !e.metaKey) clkd.addClass('selected');
-                                        if (!e.shiftKey) clkd.addClass('first');
-                                        if (!e.ctrlKey && !e.metaKey && !e.shiftKey) clkd.siblings().removeClass('selected first');
+                                        if(!e.ctrlKey && !e.metaKey) clkd.addClass('selected');
+                                        if(!e.shiftKey) clkd.addClass('first');
+                                        if(!e.ctrlKey && !e.metaKey && !e.shiftKey) clkd.siblings().removeClass('selected first');
 
                                         // выделение пунктов при зажатом Ctrl
-                                        if (e.ctrlKey || e.metaKey) {
+                                        if(e.ctrlKey || e.metaKey) {
                                             if (clkd.is('.selected')) clkd.removeClass('selected first');
                                             else clkd.addClass('selected first');
                                             clkd.siblings().removeClass('first');
                                         }
 
                                         // выделение пунктов при зажатом Shift
-                                        if (e.shiftKey) {
+                                        if(e.shiftKey) {
                                             var prev = false,
                                                 next = false;
                                             clkd.siblings().removeClass('selected').siblings('.first').addClass('selected');
-                                            clkd.prevAll().each(function () {
+                                            clkd.prevAll().each(function() {
                                                 if ($(this).is('.first')) prev = true;
                                             });
-                                            clkd.nextAll().each(function () {
+                                            clkd.nextAll().each(function() {
                                                 if ($(this).is('.first')) next = true;
                                             });
                                             if (prev) {
-                                                clkd.prevAll().each(function () {
+                                                clkd.prevAll().each(function() {
                                                     if ($(this).is('.selected')) return false;
                                                     else $(this).not('.disabled, .optgroup').addClass('selected');
                                                 });
                                             }
                                             if (next) {
-                                                clkd.nextAll().each(function () {
+                                                clkd.nextAll().each(function() {
                                                     if ($(this).is('.selected')) return false;
                                                     else $(this).not('.disabled, .optgroup').addClass('selected');
                                                 });
@@ -748,40 +750,40 @@
 
                                         // отмечаем выбранные мышью
                                         option.prop('selected', false);
-                                        li.filter('.selected').each(function () {
+                                        li.filter('.selected').each(function() {
                                             var t = $(this);
                                             var index = t.index();
                                             if (t.is('.option')) index -= t.prevAll('.optgroup').length;
                                             option.eq(index).prop('selected', true);
                                         });
-                                        el.change();
+                                        el.trigger('change.styler');
 
                                     });
 
                                     // отмечаем выбранные с клавиатуры
-                                    option.each(function (i) {
+                                    option.each(function(i) {
                                         $(this).data('optionIndex', i);
                                     });
-                                    el.change(function () {
+                                    el.on('change.styler', function() {
                                         li.removeClass('selected');
                                         var arrIndexes = [];
-                                        option.filter(':selected').each(function () {
+                                        option.filter(':selected').each(function() {
                                             arrIndexes.push($(this).data('optionIndex'));
                                         });
-                                        li.not('.optgroup').filter(function (i) {
+                                        li.not('.optgroup').filter(function(i) {
                                             return $.inArray(i, arrIndexes) > -1;
                                         }).addClass('selected');
                                     })
-                                        .focus(function () {
+                                        .on('focus.styler', function() {
                                             selectbox.addClass('focused');
                                         })
-                                        .blur(function () {
+                                        .on('blur.styler', function() {
                                             selectbox.removeClass('focused');
                                         });
 
                                     // прокручиваем с клавиатуры
                                     if (ulHeight > selectbox.height()) {
-                                        el.keydown(function (e) {
+                                        el.on('keydown.styler', function(e) {
                                             // вверх, влево, PageUp
                                             if (e.which == 38 || e.which == 37 || e.which == 33) {
                                                 ul.scrollTop(ul.scrollTop() + li.filter('.selected').position().top - liHeight);
@@ -796,14 +798,14 @@
                                 }
                             } // end doMultipleSelect()
                             if (el.is('[multiple]')) doMultipleSelect(); else doSelect();
-                        } // end selectbox()
+                        }; // end selectboxOutput()
 
-                        selectbox();
+                        selectboxOutput();
 
                         // обновление при динамическом изменении
-                        el.on('refresh', function () {
-                            el.parent().before(el).remove();
-                            selectbox();
+                        el.on('refresh', function() {
+                            el.off('.styler').parent().before(el).remove();
+                            selectboxOutput();
                         });
 
                     }
@@ -812,10 +814,10 @@
 
                 // reset
             } else if (el.is(':reset')) {
-                el.click(function () {
-                    setTimeout(function () {
+                el.on('click', function() {
+                    setTimeout(function() {
                         el.closest(opt.wrapper).find('input, select').trigger('refresh');
-                    }, 1)
+                    }, 1);
                 });
             }
             // end reset
@@ -824,9 +826,9 @@
 
             // колбек после выполнения плагина
             .promise()
-            .done(function () {
+            .done(function() {
                 opt.onFormStyled.call();
             });
 
-    }
+    };
 })(jQuery);

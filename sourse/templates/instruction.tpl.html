@@ -1,0 +1,46 @@
+@@include('blocks/_b-header.html')
+@@include('blocks/_b-breadcrumb.html')
+<div class="b-page">
+    <div class="container">
+        <div class="row_8">
+            <h1 class="b-page__title">Инструкции тренажера</h1>
+        </div>
+        <div class="row_8">
+            <div class="span2">
+                <aside class="b-page__sidebar">
+                    @@include('blocks/_smenu.html')
+                </aside>
+            </div>
+            <div class="span6">
+                <div class="row_8">
+                    <div class="span3">
+                        <select class="b-form__select">
+                            <option value="">Тип тренжера</option>
+                            <option value="">Тип 1</option>
+                            <option value="">Тип 2</option>
+                            <option value="">Тип 3</option>
+                        </select>
+                    </div>
+                    <div class="span3">
+                        <select class="b-form__select">
+                            <option value="">Модель тренжера</option>
+                            <option value="">Модель 1</option>
+                            <option value="">Модель 2</option>
+                            <option value="">Модель 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="b-slider flexslider b-slider_page-img">
+                <ul class="slides">
+                    <li><img src="images/content/cart-item_232x251.jpg" alt="Photo alt here"/></li>
+                    <li><img src="images/content/cart-item_232x251.jpg" alt="Photo alt here"/></li>
+                </ul>
+            </div>
+                <div class="row">
+                    <a class="rnd__button rnd__button_blue rnd__button_small rnd__button_ficon" href="#">инструкция в пдф</a>&nbsp;&nbsp;<a class="rnd__button rnd__button_blue rnd__button_small" href="#">Зарегистрировать </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')

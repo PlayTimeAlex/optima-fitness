@@ -9,7 +9,7 @@
         background: linear-gradient(to bottom, rgba(17, 177, 46, 1) 0%, rgba(16, 169, 42, 1) 22%, rgba(12, 139, 32, 1) 71%, rgba(11, 131, 29, 1) 90%, rgba(9, 92, 21, 1) 93%, rgba(9, 92, 21, 1) 100%);
         border: 0;
         display: inline-block;
-        font-size: em($font-size);
+        font-size: $font-size*1px;
         font-family: $second-font;
         font-weight: 500;
         padding: em(9, $font-size) em(38, $font-size);
@@ -18,6 +18,7 @@
         cursor: pointer;
         text-decoration: none;
         text-transform: uppercase;
+        position: relative;
         &:hover {
             background: linear-gradient(to bottom, rgba(9, 92, 21, 1) 0%, rgba(9, 92, 21, 1) 7%, rgba(11, 131, 29, 1) 10%, rgba(12, 139, 32, 1) 29%, rgba(16, 169, 42, 1) 78%, rgba(17, 177, 46, 1) 100%);
         }
@@ -26,6 +27,27 @@
             background: linear-gradient(to bottom, rgba(0, 145, 184, 1) 0%, rgba(0, 138, 179, 1) 17%, rgba(0, 104, 152, 1) 66%, rgba(0, 92, 142, 1) 90%, rgba(9, 69, 101, 1) 93%, rgba(9, 69, 101, 1) 100%);
             &:hover {
                 background: linear-gradient(to bottom, rgba(9, 69, 101, 1) 0%, rgba(9, 69, 101, 1) 7%, rgba(0, 92, 142, 1) 10%, rgba(0, 104, 152, 1) 34%, rgba(0, 138, 179, 1) 83%, rgba(0, 145, 184, 1) 100%);
+            }
+        }
+        &_small{
+            padding-top: em(6, $font-size);
+            padding-bottom: em(6, $font-size);
+        }
+        &_ficon{
+            padding-left: em(51, $font-size);
+            &:before {
+                content: " ";
+                display: block;
+                background: url(../images/sprite2.png) no-repeat -66px 0;
+                width: 14px;
+                height: 18px;
+                position: absolute;
+                top: 50%;
+                left: em(11, $font-size);
+                margin-top: -9px;
+            }
+            &[href$='.zip']:before{
+                
             }
         }
     }
@@ -65,8 +87,20 @@
         width: 61px;
         height: 61px;
         background: url(../images/sprite2.png) no-repeat 0 0;
+        vertical-align: text-bottom;
+        font-size: em(20);
+        color: #fff;
+        font-family: $second-font;
+        font-weight: 700;
+        text-align: center;
         &_sale {
             background-position: 0 -61px;
+            padding-top: 13px;
+            height: 48px;
+            &:after{
+                content:"%";
+                font-size:em(14,20);
+            }
         }
         &_recomend {
             background-position: 0 -122px;

@@ -3,14 +3,14 @@
 <head>
     <title>Index</title>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width">-->
-    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.min.css" media="all"/>
-    <script src="js/all.min.js"></script>
+    <script src="js/all.js"></script>
     <!--[if lte IE 8 ]>
     <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
 </head>
 <body>
+<div class="wrap">
 <header class="b-header">
     <div class="b-header__top">
         <div class="container">
@@ -29,9 +29,10 @@
                             </select>
                         </div>
                         <div class="b-header__tel"><span class="b-header__tel-code">+7 (495) </span>221-2595</div>
-                        <a class="b-header__rcall">обратный звонок</a>
+                        <a class="b-header__rcall colorbox-inline" href="#rcall">обратный звонок</a>
                     </div>
                     <div class="b-header__cart">
+                        <a class="b-header__cart-link" href="#incart" title="В корзину"></a>
                         <div class="b-header__cart-icon icon-5"><span class="b-header__cart-count">10</span></div>
                         на сумму: <span class="b-header__cart-sum">200 000.00</span> руб
                     </div>
@@ -88,7 +89,7 @@
     <div class="container">
         <div class="row_8">
             <div class="span5">
-                <h2 class="b-page__title">О НАС</h2>
+                <h1 class="b-page__title">О НАС</h1>
             </div>
             <div class="span3">
                 <div class="b-item-count b-item-count_single">
@@ -132,7 +133,6 @@
                     <div class="b-pnews__content">
                         <img src="images/content/news-prev_107x107.jpg" alt="Заголовок новости с превьюшкой"
                              class="b-pnews__img" width="107" height="107">
-
                         <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
                             чем астатический установившийся режим, пользуясь последними системами уравнений. Под
                             воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
@@ -155,7 +155,6 @@
                     <div class="b-pnews__content">
                         <img src="images/content/news-prev_107x107.jpg" alt="Заголовок новости с превьюшкой"
                              class="b-pnews__img" width="107" height="107">
-
                         <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
                             чем астатический установившийся режим, пользуясь последними системами уравнений. Под
                             воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
@@ -198,7 +197,6 @@
                         </article>
                     </div>
                 </div>
-
                 <div class="b-paginator">
     <span class="b-paginator__text">Страница 1 из 10:</span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">&larr;</a></span>
@@ -209,14 +207,12 @@
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">6</a></span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">&rarr;</a></span>
 </div>
-
                 <div class="b-item-count b-item-count_single">
     <span class="b-item-count__text">Количество новостей на странице:</span>
     <span class="b-item-count__item b-item-count__item_current">10</span>
     <span class="b-item-count__item"><a class="b-item-count__link" href="#">20</a></span>
     <span class="b-item-count__item"><a class="b-item-count__link" href="#">все</a></span>
 </div>
-
             </div>
         </div>
     </div>
@@ -282,5 +278,24 @@
         </div>
     </div>
 </footer>
+        <div style="display:none;">
+            <div class="b-popup" id="rcall">
+                <h2 class="b-popup__title">заказать обратный звонок</h2>
+                <form action="/">
+                    <div class="row row_8">
+                        <div class="span4">
+                            <input class="b-form__text" type="text" placeholder="Ваше имя"/>
+                        </div>
+                        <div class="span4">
+                            <input class="b-form__text b-form__text_tel" type="tel" placeholder="Ваш телефон"/>
+                        </div>
+                    </div>
+                    <div class="b-popup__submit">
+                        <button type="submit" class="rnd__button rnd__button_blue rnd__button_small">отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
 </body>
 </html>

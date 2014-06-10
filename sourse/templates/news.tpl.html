@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index</title>
-    <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width">-->
-    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
-    <link rel="stylesheet" href="css/style.min.css" media="all"/>
-    <script src="js/all.min.js"></script>
-    <!--[if lte IE 8 ]>
-    <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
-</head>
-<body>
 @@include('blocks/_b-header.html')
 @@include('blocks/_b-breadcrumb.html')
 <div class="b-page">
     <div class="container">
         <div class="row_8">
             <div class="span5">
-                <h2 class="b-page__title">О НАС</h2>
+                <h1 class="b-page__title">О НАС</h1>
             </div>
             <div class="span3">
                 @@include('blocks/_item-count.html', {
@@ -39,7 +26,6 @@
                     <div class="b-pnews__content">
                         <img src="images/content/news-prev_107x107.jpg" alt="Заголовок новости с превьюшкой"
                              class="b-pnews__img" width="107" height="107">
-
                         <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
                             чем астатический установившийся режим, пользуясь последними системами уравнений. Под
                             воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
@@ -62,7 +48,6 @@
                     <div class="b-pnews__content">
                         <img src="images/content/news-prev_107x107.jpg" alt="Заголовок новости с превьюшкой"
                              class="b-pnews__img" width="107" height="107">
-
                         <div class="b-pnews__text b-text"><p>Система координат неустойчиво даёт большую проекцию на оси,
                             чем астатический установившийся режим, пользуясь последними системами уравнений. Под
                             воздействием изменяемого вектора гравитации абсолютно твёрдое тело заставляет перейти к
@@ -105,18 +90,13 @@
                         </article>
                     </div>
                 </div>
-
                 @@include('blocks/_paginator.html')
-
                 @@include('blocks/_item-count.html', {
                 "classmod": "b-item-count_single",
                 "text": "Количество новостей на странице:"
                 })
-
             </div>
         </div>
     </div>
 </div>
 @@include('blocks/_b-footer.html')
-</body>
-</html>

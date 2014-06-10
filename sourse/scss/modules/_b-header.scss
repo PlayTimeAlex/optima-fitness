@@ -29,6 +29,7 @@
         font-family: $second-font;
         font-weight: 900;
         text-transform: uppercase;
+        text-decoration: none;
         &:hover {
             border-bottom-color: transparent;
         }
@@ -116,7 +117,6 @@
         padding: em(5) 0 em(5) em(50, 14);
         position: relative;
         margin-top: em(8);
-
         &-sum {
             font-size: em(18, 14);
             font-weight: bold;
@@ -141,6 +141,16 @@
             top: -$height/2;
             right: -$height/2;
             display: block;
+        }
+        &-link{
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            z-index: 20;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
         }
     }
 }

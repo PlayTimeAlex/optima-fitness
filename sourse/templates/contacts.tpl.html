@@ -1,0 +1,42 @@
+@@include('blocks/_b-header.html')
+@@include('blocks/_b-breadcrumb.html')
+<div class="b-page">
+    <div class="container">
+        <h1 class="b-page__title">КОНТАКТЫ</h1>
+        <div class="row_8">
+            <div class="span4">
+                <div class="b-text">
+                    <p>Москва, ул. Ак. Королева 12, оф. 222<br />тел. +7 (775) 475 59 35<br />тел. +7 (7172) 62 55 35<br />эл. почта <a href="mailto:info@optima-fit.ru">info@optima-fit.ru</a></p>
+                    <form action="/">
+                        <!-- класс b-form__table_contacts добавляет отступ сверху (+17px) -->
+                        <table class="b-form__table b-form__table_page b-form__table_contacts">
+                            <tr>
+                                <td><label for="bc-name" class="b-form__label">Ваше Имя Отчество</label></td>
+                                <td><input type="text" class="b-form__text b-form__text_num" id="bc-name"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="bc-email" class="b-form__label">Эл. почта</label></td>
+                                <td><input type="email" class="b-form__text b-form__text_num" id="bc-email"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="bc-message" class="b-form__label">Сообщение</label></td>
+                                <td><textarea class="b-form__textarea" id="bc-message" rows="5"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button class="rnd__button rnd__button_blue rnd__button_small" type="submit">отправить</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="b-map">
+                    <!-- карту нужно сгенерировать новую http://api.yandex.ru/maps/tools/constructor/ -->
+                    <script async type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=V1QzmoNtYlcBQ4HoWu5B8sBOvAm2tYCr"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')

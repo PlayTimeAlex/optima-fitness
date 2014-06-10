@@ -1,16 +1,106 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Index</title>
-    <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width">-->
-    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
-    <link rel="stylesheet" href="css/style.min.css" media="all"/>
-    <script src="js/all.min.js"></script>
-    <!--[if lte IE 8 ]>
-    <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
-</head>
-<body>
+@@include('blocks/_b-header.html')
+@@include('blocks/_b-breadcrumb.html')
+<div class="container">
+    <div class="b-pslider flexslider flexslider_control flexslider_nav">
+        <ul class="slides">
+            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
+            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
+            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
+            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
+        </ul>
+    </div>
+    <div class="b-lmenu">
+        <div class="row">
+            <div class="span3">
+                <a class="b-lmenu__button" href="#"><span class="b-lmenu__button-text"><span class="icon-10 b-lmenu__icon"></span>О нас</span></a>
+            </div>
+            <div class="span3">
+                <a class="b-lmenu__button" href="#"><span class="b-lmenu__button-text"><span class="icon-11 b-lmenu__icon"></span>Поддержка</span></a>
+            </div>
+            <div class="span3">
+                <a class="b-lmenu__button" href="#"><span class="b-lmenu__button-text b-lmenu__button-text_bi">Отзывы<br />покупателей</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="b-recommended">
+        <h2 class="rnd__dectitle">рекомендуемые товары</h2>
+        <div class="b-slider flexslider flexslider_control">
+            <ul class="slides">
+                <li>
+                    <div class="row row_8">
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "1"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "2"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "3"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "4"
+                            })
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row row_8">
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "5"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "6"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "7"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "8"
+                            })
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="row row_8">
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "9"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "10"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "11"
+                            })
+                        </div>
+                        <div class="span2">
+                            @@include('blocks/_b-recomended.html', {
+                            "id": "12"
+                            })
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
-</body>
-</html>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')

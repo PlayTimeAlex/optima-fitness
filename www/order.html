@@ -3,14 +3,14 @@
 <head>
     <title>Index</title>
     <meta charset="UTF-8">
-    <!--<meta name="viewport" content="width=device-width">-->
-    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">-->
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.min.css" media="all"/>
-    <script src="js/all.min.js"></script>
+    <script src="js/all.js"></script>
     <!--[if lte IE 8 ]>
     <script type="text/javascript">window.location.href = "ie8min/index.html";</script><![endif]-->
 </head>
 <body>
+<div class="wrap">
 <header class="b-header">
     <div class="b-header__top">
         <div class="container">
@@ -29,9 +29,10 @@
                             </select>
                         </div>
                         <div class="b-header__tel"><span class="b-header__tel-code">+7 (495) </span>221-2595</div>
-                        <a class="b-header__rcall">обратный звонок</a>
+                        <a class="b-header__rcall colorbox-inline" href="#rcall">обратный звонок</a>
                     </div>
                     <div class="b-header__cart">
+                        <a class="b-header__cart-link" href="#incart" title="В корзину"></a>
                         <div class="b-header__cart-icon icon-5"><span class="b-header__cart-count">10</span></div>
                         на сумму: <span class="b-header__cart-sum">200 000.00</span> руб
                     </div>
@@ -86,7 +87,7 @@
 </div>
 <div class="b-page">
 <div class="container">
-<h2 class="b-page__title">ОФОРМИТЬ ЗАКАЗ</h2>
+<h1 class="b-page__title">ОФОРМИТЬ ЗАКАЗ</h1>
 
 <div class="b-cart">
 <div class="b-cart-tab clearfix">
@@ -134,7 +135,7 @@
                 </tr>
                 <tr>
                     <td><label for="bc-tel" class="b-form__label">Телефон (код) 123-45-65:<sup class="b-form__required">*</sup></label></td>
-                    <td><input type="text" class="b-form__text" id="bc-tel"><span class="b-form__help">если возникнут вопросы по доставке</span></td>
+                    <td><input type="tel" class="b-form__text" id="bc-tel"><span class="b-form__help">если возникнут вопросы по доставке</span></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -388,5 +389,24 @@
         </div>
     </div>
 </footer>
+        <div style="display:none;">
+            <div class="b-popup" id="rcall">
+                <h2 class="b-popup__title">заказать обратный звонок</h2>
+                <form action="/">
+                    <div class="row row_8">
+                        <div class="span4">
+                            <input class="b-form__text" type="text" placeholder="Ваше имя"/>
+                        </div>
+                        <div class="span4">
+                            <input class="b-form__text b-form__text_tel" type="tel" placeholder="Ваш телефон"/>
+                        </div>
+                    </div>
+                    <div class="b-popup__submit">
+                        <button type="submit" class="rnd__button rnd__button_blue rnd__button_small">отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
 </body>
 </html>
