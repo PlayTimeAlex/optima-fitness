@@ -9766,6 +9766,16 @@ $.widget( "ui.slider", $.ui.mouse, {
             inline:true,
             close: ""
         });
+
+        //faq (spoiler)
+        $('.b-faq__title').click(function(){
+            el = $(this).parent();
+            if(el.hasClass('open')){
+                el.removeClass('open');
+            } else {
+                el.addClass('open');
+            }
+        });
     });
 
     $(window).load(function () {

@@ -53,7 +53,7 @@
             }
         }
         &_page{
-            margin: em(23) 0 em(50);
+            margin: em(5) 0 em(30);
             td {
                 &:first-child {
                     text-align: right;
@@ -145,5 +145,8 @@
         font-size: em(12);
         font-style: italic;
 
+    }
+    &__el{
+        padding-bottom: em(17);
     }
 }

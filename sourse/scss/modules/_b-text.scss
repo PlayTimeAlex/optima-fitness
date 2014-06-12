@@ -10,6 +10,15 @@
         color: #454545;
         font-family: $second-font;
         font-weight: 300;
+        $font-size: 24;
+        font-size: em($font-size);
+        line-height: 30/$font-size;
+        padding-bottom: em(7,$font-size);
+    }
+    h3{
+        color: #454545;
+        font-family: $second-font;
+        font-weight: 300;
         $font-size: 18;
         font-size: em($font-size);
         line-height: 30/$font-size;

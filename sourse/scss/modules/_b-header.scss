@@ -39,7 +39,7 @@
         &-select.ru .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .ru:before {
             background-position: 0 -22px;
         }
-        &-select.ua .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .ua:before {
+        &-select.de .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .de:before {
             background-position: 0 -11px;
         }
         &-select.en .jq-selectbox__select:before, &-select .jq-selectbox__dropdown .en:before {
@@ -112,20 +112,21 @@
     }
     &__cart {
         float: right;
-        font-size: em(14);
+        $font-size: 14;
+        font-size: em($font-size);
         color: #464646;
         padding: em(5) 0 em(5) em(50, 14);
         position: relative;
-        margin-top: em(8);
+        margin-top: em(11);
         &-sum {
             font-size: em(18, 14);
             font-weight: bold;
         }
         &-icon {
-            font-size: em(31);
+            font-size: em(31, $font-size);
             position: absolute;
             left: 0;
-            top: 0;
+            top: em(3, $font-size);
         }
         &-count {
             $font-size: em(10, 31);

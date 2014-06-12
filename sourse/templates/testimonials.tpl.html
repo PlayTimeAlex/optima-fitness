@@ -1,0 +1,30 @@
+@@include('blocks/_b-header.html')
+@@include('blocks/_b-breadcrumb.html')
+<div class="b-page b-page_gray">
+    <div class="container">
+        <h1 class="rnd__dectitle">отзывы</h1>
+        <div class="row_8">
+            <div class="span5">
+                @@include('blocks/_b-review.html', {
+                "id": "1"
+                })
+                @@include('blocks/_b-review.html', {
+                "id": "2"
+                })
+                @@include('blocks/_b-review.html', {
+                "id": "3"
+                })
+                @@include('blocks/_b-review.html', {
+                "id": "4"
+                })
+                @@include('blocks/_b-review.html', {
+                "id": "5"
+                })
+            </div>
+            <div class="span3">
+                @@include('blocks/_b-review-form.html')
+            </div>
+        </div>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')
