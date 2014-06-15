@@ -1,79 +1,79 @@
-.b-recommended{
+.b-recommended {
     margin: 0 0 em(35);
     $font-size-title: 16;
-    &__img{
+    &__img {
         display: block;
         margin: 0 auto;
         max-width: 100%;
-        border-left:em(18) solid transparent;
-        border-right:em(18) solid transparent;
+        border-left: em(18) solid transparent;
+        border-right: em(18) solid transparent;
         box-sizing: border-box;
     }
-    &__link{
+    &__link {
         display: block;
     }
-    &__item{
+    &__item {
         margin: em(35) 0 0;
         padding: 0 0 em(30);
     }
-    &__labels{
+    &__labels {
         padding: em(11) em(18) 0 em(18);
         text-align: center;
     }
-    &__title{
+    &__title {
         font-size: em($font-size-title);
         text-transform: uppercase;
         border-bottom: 1px solid #aaaaaa;
         font-family: $second-font;
         padding: em(14, $font-size-title) em(18, $font-size-title) em(7, $font-size-title);
         font-weight: 700;
-        &-man{
+        &-man {
             text-transform: none;
             color: #f26522;
             display: block;
             font-weight: 300;
         }
-        a{
+        a {
             color: inherit;
             text-decoration: none;
         }
     }
-    &__bottom{
-        padding:em(15) em(18) 0;
+    &__bottom {
+        padding: em(15) em(18) 0;
     }
-    &__oldprice{
+    &__oldprice {
         color: #898989;
         font-size: em(14);
         font-weight: 700;
         font-family: $second-font;
         text-decoration: line-through;
     }
-    &__price{
+    &__price {
         color: #f26522;
         font-size: em(24);
-        font-weight:700;
+        font-weight: 700;
         font-family: $second-font;
         padding: 0 0 em(3, 24);
     }
-    &__instock{
+    &__instock {
         font-size: em(14);
         color: #598527;
         padding: 0 0 em(9, 14) 0;
     }
-    &__item_small{
+    &__item_small {
         margin-top: em(15);
     }
-    &__item_small &__img{
+    &__item_small &__img {
         border: 1px solid #c3c3c3;
     }
-    &__item_small &__title{
+    &__item_small &__title {
         padding-top: em(9, $font-size-title);
         font-weight: 300;
-        &-man{
+        &-man {
             font-weight: 700;
         }
     }
-    &__item_small &__price{
+    &__item_small &__price {
         padding-bottom: em(15, 24);
     }
 }

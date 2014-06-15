@@ -31,10 +31,10 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 }
 
 @media print {
-    .flex-prev, .flex-next, .b-header, .b-footer, .rnd__button, .b-line_breacrumb, .b-rating{
-        display: none!important;
+    .flex-prev, .flex-next, .b-header, .b-footer, .rnd__button, .b-line_breacrumb, .b-rating {
+        display: none !important;
     }
-    .b-compare__management{
+    .b-compare__management {
         opacity: 0;
     }
 }

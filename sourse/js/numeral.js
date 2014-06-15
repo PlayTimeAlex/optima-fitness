@@ -29,7 +29,7 @@
 
 
         // Numeral prototype object
-    function Numeral (number) {
+    function Numeral(number) {
         this._value = number;
     }
 
@@ -39,7 +39,7 @@
      * Fixes binary rounding issues (eg. (0.615).toFixed(2) === '0.61') that present
      * problems for accounting- and finance-related software.
      */
-    function toFixed (value, precision, roundingFunction, optionals) {
+    function toFixed(value, precision, roundingFunction, optionals) {
         var power = Math.pow(10, precision),
             optionalsRegExp,
             output;
@@ -61,7 +61,7 @@
      ************************************/
 
         // determine what type of formatting we need to do
-    function formatNumeral (n, format, roundingFunction) {
+    function formatNumeral(n, format, roundingFunction) {
         var output;
 
         // figure out what kind of format we are dealing with
@@ -80,7 +80,7 @@
     }
 
     // revert to number
-    function unformatNumeral (n, string) {
+    function unformatNumeral(n, string) {
         var stringOriginal = string,
             thousandRegExp,
             millionRegExp,
@@ -97,7 +97,7 @@
                 n._value = 0;
             } else {
                 if (languages[currentLanguage].delimiters.decimal !== '.') {
-                    string = string.replace(/\./g,'').replace(languages[currentLanguage].delimiters.decimal, '.');
+                    string = string.replace(/\./g, '').replace(languages[currentLanguage].delimiters.decimal, '.');
                 }
 
                 // see if abbreviations are there so that we can multiply to the correct number
@@ -116,7 +116,7 @@
                 }
 
                 // do some math to create our number
-                n._value = ((bytesMultiplier) ? bytesMultiplier : 1) * ((stringOriginal.match(thousandRegExp)) ? Math.pow(10, 3) : 1) * ((stringOriginal.match(millionRegExp)) ? Math.pow(10, 6) : 1) * ((stringOriginal.match(billionRegExp)) ? Math.pow(10, 9) : 1) * ((stringOriginal.match(trillionRegExp)) ? Math.pow(10, 12) : 1) * ((string.indexOf('%') > -1) ? 0.01 : 1) * (((string.split('-').length + Math.min(string.split('(').length-1, string.split(')').length-1)) % 2)? 1: -1) * Number(string.replace(/[^0-9\.]+/g, ''));
+                n._value = ((bytesMultiplier) ? bytesMultiplier : 1) * ((stringOriginal.match(thousandRegExp)) ? Math.pow(10, 3) : 1) * ((stringOriginal.match(millionRegExp)) ? Math.pow(10, 6) : 1) * ((stringOriginal.match(billionRegExp)) ? Math.pow(10, 9) : 1) * ((stringOriginal.match(trillionRegExp)) ? Math.pow(10, 12) : 1) * ((string.indexOf('%') > -1) ? 0.01 : 1) * (((string.split('-').length + Math.min(string.split('(').length - 1, string.split(')').length - 1)) % 2) ? 1 : -1) * Number(string.replace(/[^0-9\.]+/g, ''));
 
                 // round if we are talking about bytes
                 n._value = (bytesMultiplier) ? Math.ceil(n._value) : n._value;
@@ -125,7 +125,7 @@
         return n._value;
     }
 
-    function formatCurrency (n, format, roundingFunction) {
+    function formatCurrency(n, format, roundingFunction) {
         var symbolIndex = format.indexOf('$'),
             openParenIndex = format.indexOf('('),
             minusSignIndex = format.indexOf('-'),
@@ -152,7 +152,7 @@
             if (output.indexOf('(') > -1 || output.indexOf('-') > -1) {
                 output = output.split('');
                 spliceIndex = 1;
-                if (symbolIndex < openParenIndex || symbolIndex < minusSignIndex){
+                if (symbolIndex < openParenIndex || symbolIndex < minusSignIndex) {
                     // the symbol appears before the "(" or "-"
                     spliceIndex = 0;
                 }
@@ -174,7 +174,7 @@
         return output;
     }
 
-    function formatPercentage (n, format, roundingFunction) {
+    function formatPercentage(n, format, roundingFunction) {
         var space = '',
             output,
             value = n._value * 100;
@@ -189,7 +189,7 @@
 
         output = formatNumber(value, format, roundingFunction);
 
-        if (output.indexOf(')') > -1 ) {
+        if (output.indexOf(')') > -1) {
             output = output.split('');
             output.splice(-1, 0, space + '%');
             output = output.join('');
@@ -200,14 +200,14 @@
         return output;
     }
 
-    function formatTime (n) {
-        var hours = Math.floor(n._value/60/60),
-            minutes = Math.floor((n._value - (hours * 60 * 60))/60),
+    function formatTime(n) {
+        var hours = Math.floor(n._value / 60 / 60),
+            minutes = Math.floor((n._value - (hours * 60 * 60)) / 60),
             seconds = Math.round(n._value - (hours * 60 * 60) - (minutes * 60));
         return hours + ':' + ((minutes < 10) ? '0' + minutes : minutes) + ':' + ((seconds < 10) ? '0' + seconds : seconds);
     }
 
-    function unformatTime (string) {
+    function unformatTime(string) {
         var timeArray = string.split(':'),
             seconds = 0;
         // turn hours and minutes into seconds and add them all up
@@ -227,7 +227,7 @@
         return Number(seconds);
     }
 
-    function formatNumber (value, format, roundingFunction) {
+    function formatNumber(value, format, roundingFunction) {
         var negP = false,
             signed = false,
             optDec = false,
@@ -312,7 +312,7 @@
 
                 for (power = 0; power <= suffixes.length; power++) {
                     min = Math.pow(1024, power);
-                    max = Math.pow(1024, power+1);
+                    max = Math.pow(1024, power + 1);
 
                     if (value >= min && value < max) {
                         bytes = bytes + suffixes[power];
@@ -421,7 +421,7 @@
         }
 
         if (key && !values) {
-            if(!languages[key]) {
+            if (!languages[key]) {
                 throw new Error('Unknown language : ' + key);
             }
             currentLanguage = key;
@@ -462,7 +462,7 @@
         },
         ordinal: function (number) {
             var b = number % 10;
-            return (~~ (number % 100 / 10) === 1) ? 'th' :
+            return (~~(number % 100 / 10) === 1) ? 'th' :
                 (b === 1) ? 'st' :
                     (b === 2) ? 'nd' :
                         (b === 3) ? 'rd' : 'th';
@@ -579,75 +579,81 @@
 
     numeral.fn = Numeral.prototype = {
 
-        clone : function () {
+        clone: function () {
             return numeral(this);
         },
 
-        format : function (inputString, roundingFunction) {
+        format: function (inputString, roundingFunction) {
             return formatNumeral(this,
                 inputString ? inputString : defaultFormat,
                 (roundingFunction !== undefined) ? roundingFunction : Math.round
             );
         },
 
-        unformat : function (inputString) {
+        unformat: function (inputString) {
             if (Object.prototype.toString.call(inputString) === '[object Number]') {
                 return inputString;
             }
             return unformatNumeral(this, inputString ? inputString : defaultFormat);
         },
 
-        value : function () {
+        value: function () {
             return this._value;
         },
 
-        valueOf : function () {
+        valueOf: function () {
             return this._value;
         },
 
-        set : function (value) {
+        set: function (value) {
             this._value = Number(value);
             return this;
         },
 
-        add : function (value) {
+        add: function (value) {
             var corrFactor = correctionFactor.call(null, this._value, value);
+
             function cback(accum, curr, currI, O) {
                 return accum + corrFactor * curr;
             }
+
             this._value = [this._value, value].reduce(cback, 0) / corrFactor;
             return this;
         },
 
-        subtract : function (value) {
+        subtract: function (value) {
             var corrFactor = correctionFactor.call(null, this._value, value);
+
             function cback(accum, curr, currI, O) {
                 return accum - corrFactor * curr;
             }
+
             this._value = [value].reduce(cback, this._value * corrFactor) / corrFactor;
             return this;
         },
 
-        multiply : function (value) {
+        multiply: function (value) {
             function cback(accum, curr, currI, O) {
                 var corrFactor = correctionFactor(accum, curr);
                 return (accum * corrFactor) * (curr * corrFactor) /
                     (corrFactor * corrFactor);
             }
+
             this._value = [this._value, value].reduce(cback, 1);
             return this;
         },
 
-        divide : function (value) {
+        divide: function (value) {
             function cback(accum, curr, currI, O) {
                 var corrFactor = correctionFactor(accum, curr);
                 return (accum * corrFactor) / (curr * corrFactor);
             }
+
             this._value = [this._value, value].reduce(cback);
             return this;
         },
 
-        difference : function (value) {
+        difference: function (value) {
             return Math.abs(numeral(this._value).subtract(value).value());
         }
 

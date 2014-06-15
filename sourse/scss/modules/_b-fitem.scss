@@ -1,35 +1,35 @@
-.b-fitem{
+.b-fitem {
     padding-top: em(57);
     padding-bottom: em(95);
-    &__title{
+    &__title {
         color: #454545;
         font-family: "Roboto";
         $font-size: 44;
         font-size: em($font-size);
         text-transform: uppercase;
         font-weight: 300;
-        line-height:47/$font-size;
+        line-height: 47/$font-size;
         padding-bottom: em(18, $font-size);
-        .man{
+        .man {
             font-weight: 900;
             color: #ef592c;
         }
     }
-    &__description{
+    &__description {
         padding-bottom: em(2);
     }
-    .b-catalog__tocompare{
+    .b-catalog__tocompare {
         display: inline-block;
         padding: 0;
         padding-bottom: em(10, 14);
     }
-    .b-catalog__old-price{
+    .b-catalog__old-price {
         padding-top: em(15, 14);
     }
-    .b-rating{
+    .b-rating {
         margin-bottom: 0;
     }
-    &__slider{
+    &__slider {
         position: relative;
         margin-top: em(40);
         img {
@@ -38,35 +38,35 @@
             max-width: 100%;
         }
     }
-    &__navlink{
+    &__navlink {
         display: block;
         width: 96px;
         height: 96px;
         border: 1px solid #d0d0d0;
         margin: em(44) auto em(22);
-        img{
+        img {
             max-width: 100%;
             max-height: 100%;
             display: block;
         }
-        &.active{
+        &.active {
             box-shadow: 0 0 0 3px #f16632;
             border-radius: 2px;
         }
     }
-    &__slider-l{
+    &__slider-l {
         padding: 0 em(30);
         overflow: hidden;
         display: block;
-        img{
+        img {
             width: 100%;
             display: block;
         }
     }
-    &_gl{
+    &_gl {
         position: relative;
-        &:after{
-            content:"";
+        &:after {
+            content: "";
             display: block;
             position: absolute;
             top: 50%;
@@ -79,13 +79,13 @@
             z-index: 10;
             opacity: .2;
         }
-        &:hover:after{
+        &:hover:after {
             opacity: .8;
         }
     }
-    &_bottom{
+    &_bottom {
         padding-top: 0;
-        .b-fitem__description{
+        .b-fitem__description {
             padding-top: em(40);
         }
     }

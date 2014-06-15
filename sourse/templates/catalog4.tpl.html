@@ -3,6 +3,21 @@
 <div class="b-page">
     <div class="container">
         <h1 class="b-page__title">КАТАЛОГ</h1>
+
+        <div class="b-compare__list-wrap clearfix">
+            <div class="b-compare__list">
+                <div class="row">
+                    <div class="span8">
+                        В сравнении 3 товара: <span class="b-compare__list-item"><a href="#del" title="Удалить"></a>OptiTrack 18</span>
+                        <span class="b-compare__list-item"><a href="#del" title="Удалить"></a>OptiTrack 18</span> <span
+                            class="b-compare__list-item"><a href="#del" title="Удалить"></a>OptiTrack 18</span>
+                    </div>
+                    <div class="span1 rnd__right">
+                        <a class="b-compare__list-link" href="#comparepage" title="Сравнить">Сравнить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <a class="rnd__banner" href="#"><img src="images/content/catalog-banner.jpg" alt="banner alt"/></a>
     </div>
     <div class="b-filter">
@@ -37,8 +52,10 @@
                 </div>
                 <div class="span2">
                     <h2 class="b-filter__title">Подбор по стоимости</h2>
+
                     <div class="b-filter__price">
-                        от <input data-min="100" type="text" value="100" class="b-form__text" id="filtermin"/> до <input data-max="10000" type="text" value="10000"  class="b-form__text"  id="filtermax"/> руб
+                        от <input data-min="100" type="text" value="100" class="b-form__text" id="filtermin"/> до <input
+                            data-max="10000" type="text" value="10000" class="b-form__text" id="filtermax"/> руб
                         <div id="b-filter__slider"></div>
                     </div>
                 </div>
@@ -49,60 +66,60 @@
         <div class="row_8">
             <div class="span4">
                 @@include('blocks/_b-catalog-item.html', {
-                    "id": "1",
-                    "stocktext": "Есть в наличии",
-                    "classmod": "",
-                    "oldprice": "400 000 руб",
-                    "btnmodclass": ""
+                "id": "1",
+                "stocktext": "Есть в наличии",
+                "classmod": "",
+                "oldprice": "400 000 руб",
+                "btnmodclass": ""
                 })
             </div>
             <div class="span4">
                 @@include('blocks/_b-catalog-item.html', {
-                    "id": "2",
-                    "stocktext": "Нет в наличии",
-                    "classmod": "b-catalog__stock_no",
-                    "oldprice": "",
-                    "btnmodclass": "rnd__button_disabled"
-                })
-            </div>
-        </div>
-        <div class="row_8">
-            <div class="span4">
-                @@include('blocks/_b-catalog-item.html', {
-                    "id": "3",
-                    "stocktext": "Нет в наличии",
-                    "classmod": "b-catalog__stock_no",
-                    "oldprice": "400 000 руб",
-                    "btnmodclass": "rnd__button_disabled"
-                })
-            </div>
-            <div class="span4">
-                @@include('blocks/_b-catalog-item.html', {
-                    "id": "4",
-                    "stocktext": "Есть в наличии",
-                    "classmod": "",
-                    "oldprice": "",
-                    "btnmodclass": ""
+                "id": "2",
+                "stocktext": "Нет в наличии",
+                "classmod": "b-catalog__stock_no",
+                "oldprice": "",
+                "btnmodclass": "rnd__button_disabled"
                 })
             </div>
         </div>
         <div class="row_8">
             <div class="span4">
                 @@include('blocks/_b-catalog-item.html', {
-                    "id": "5",
-                    "stocktext": "Нет в наличии",
-                    "classmod": "b-catalog__stock_no",
-                    "oldprice": "400 000 руб",
-                    "btnmodclass": "rnd__button_disabled"
+                "id": "3",
+                "stocktext": "Нет в наличии",
+                "classmod": "b-catalog__stock_no",
+                "oldprice": "400 000 руб",
+                "btnmodclass": "rnd__button_disabled"
                 })
             </div>
             <div class="span4">
                 @@include('blocks/_b-catalog-item.html', {
-                    "id": "6",
-                    "stocktext": "Есть в наличии",
-                    "classmod": "",
-                    "oldprice": "400 000 руб",
-                    "btnmodclass": ""
+                "id": "4",
+                "stocktext": "Есть в наличии",
+                "classmod": "",
+                "oldprice": "",
+                "btnmodclass": ""
+                })
+            </div>
+        </div>
+        <div class="row_8">
+            <div class="span4">
+                @@include('blocks/_b-catalog-item.html', {
+                "id": "5",
+                "stocktext": "Нет в наличии",
+                "classmod": "b-catalog__stock_no",
+                "oldprice": "400 000 руб",
+                "btnmodclass": "rnd__button_disabled"
+                })
+            </div>
+            <div class="span4">
+                @@include('blocks/_b-catalog-item.html', {
+                "id": "6",
+                "stocktext": "Есть в наличии",
+                "classmod": "",
+                "oldprice": "400 000 руб",
+                "btnmodclass": ""
                 })
             </div>
         </div>

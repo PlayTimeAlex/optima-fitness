@@ -1,35 +1,35 @@
-.b-where-buy{
-    &__letter{
+.b-where-buy {
+    &__letter {
         display: block;
         color: $base__link-color;
-        font-family:Verdana, Geneva, sans-serif;
+        font-family: Verdana, Geneva, sans-serif;
         font-size: em(18);
         font-weight: bold;
-        padding: em(22,18) 0 em(0) em(20, 18);
-        &:first-child{
-            padding-top: em(11,18);
+        padding: em(22, 18) 0 em(0) em(20, 18);
+        &:first-child {
+            padding-top: em(11, 18);
         }
     }
-    &__city{
+    &__city {
         display: block;
-        font-family:Verdana, Geneva, sans-serif;
+        font-family: Verdana, Geneva, sans-serif;
         font-size: em(14);
         padding: em(1, 14) 0 em(1, 14) em(20, 14);
         text-decoration: none;
-        &:hover{
+        &:hover {
             color: #ef592c;
         }
     }
-    &__popup{
+    &__popup {
         padding: em(23);
 
         position: absolute;
         width: 912px;
         left: 100px;
         top: 200px;
-        background:#FFFFFF;
+        background: #FFFFFF;
     }
-    &__m-item{
+    &__m-item {
         padding: 0 0 0 em(46);
     }
 }

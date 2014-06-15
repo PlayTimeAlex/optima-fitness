@@ -1,6 +1,6 @@
 .b-form {
     $font-size: 14;
-    &__text , &__textarea{
+    &__text, &__textarea {
         box-sizing: border-box;
         border: 1px solid #d2d2d2;
         font-size: $font-size*1px;
@@ -18,13 +18,13 @@
             width: em(95, $font-size);
         }
     }
-    &__text:focus , &__textarea:focus {
+    &__text:focus, &__textarea:focus {
         box-shadow: 0 0 5px #0076a3;
     }
-    &__textarea{
+    &__textarea {
         resize: none;
         height: auto;
-        padding-top:em(5);
+        padding-top: em(5);
         padding-bottom: em(5);
     }
     &__label {
@@ -52,7 +52,7 @@
                 width: em(310);
             }
         }
-        &_page{
+        &_page {
             margin: em(5) 0 em(30);
             td {
                 &:first-child {
@@ -60,7 +60,7 @@
                 }
             }
         }
-        &_contacts{
+        &_contacts {
             margin-top: em(40);
         }
     }
@@ -75,8 +75,8 @@
         font-size: em(12);
         color: #898989;
         font-style: italic;
-        &_cell{
-            padding-left: em(25,12);
+        &_cell {
+            padding-left: em(25, 12);
         }
     }
     &_cart {
@@ -86,7 +86,7 @@
         vertical-align: middle;
         margin-right: 15px;
     }
-    &__select{
+    &__select {
         &.jq-selectbox {
             display: block !important;
             width: 100%;
@@ -101,7 +101,7 @@
                         color: #888;
                     }
                 }
-                &__trigger{
+                &__trigger {
                     border-top: em(10) solid #464646;
                     border-left: 6px solid transparent;
                     border-right: 6px solid transparent;
@@ -110,7 +110,7 @@
                     right: em(21);
                     margin-top: -5px;
                 }
-                &__dropdown{
+                &__dropdown {
                     background: #fff;
                     border: 1px solid #d2d2d2;
                     border-top: 0;
@@ -119,11 +119,11 @@
                     padding: em(5) 0;
                     cursor: pointer;
                     z-index: 10;
-                    li{
+                    li {
                         font-size: em(12);
                         color: #888;
                         padding: em(2) em(12);
-                        &:hover{
+                        &:hover {
                             background: #d1d1d1;
                             color: #414546;
                         }
@@ -131,22 +131,22 @@
                 }
             }
         }
-        &.opened .jq-selectbox__trigger{
+        &.opened .jq-selectbox__trigger {
             border-top: 0;
-            border-bottom:  em(10) solid #464646;
+            border-bottom: em(10) solid #464646;
         }
     }
-    &_datepicker{
-        width: em(132,$font-size);
-        background: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIiBbDQoJPCFFTlRJVFkgbnNfZmxvd3MgImh0dHA6Ly9ucy5hZG9iZS5jb20vRmxvd3MvMS4wLyI+DQpdPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHBhdGggZD0iTS44MzMgNi42NjdoMTguMzMzdjEyLjVoLTE4LjMzM3YtMTIuNXptMTQuMTY3LTIuNXYtMS42NjdoNC4xNjd2My4zMzNoLTE4LjMzNHYtMy4zMzNoNC4xNjd2MS42NjdoLjgzM3YtMS42NjdoOC4zMzN2MS42NjdoLjgzNHptLS44MzMtNC4xNjd2MS42NjdoLTguMzM0di0xLjY2N2gtLjgzM3YxLjY2N2gtNXYxOC4zMzNoMjB2LTE4LjMzM2gtNXYtMS42NjdoLS44MzN6Ii8+PC9zdmc+) no-repeat em(104,$font-size) center;
+    &_datepicker {
+        width: em(132, $font-size);
+        background: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIiBbDQoJPCFFTlRJVFkgbnNfZmxvd3MgImh0dHA6Ly9ucy5hZG9iZS5jb20vRmxvd3MvMS4wLyI+DQpdPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHBhdGggZD0iTS44MzMgNi42NjdoMTguMzMzdjEyLjVoLTE4LjMzM3YtMTIuNXptMTQuMTY3LTIuNXYtMS42NjdoNC4xNjd2My4zMzNoLTE4LjMzNHYtMy4zMzNoNC4xNjd2MS42NjdoLjgzM3YtMS42NjdoOC4zMzN2MS42NjdoLjgzNHptLS44MzMtNC4xNjd2MS42NjdoLTguMzM0di0xLjY2N2gtLjgzM3YxLjY2N2gtNXYxOC4zMzNoMjB2LTE4LjMzM2gtNXYtMS42NjdoLS44MzN6Ii8+PC9zdmc+) no-repeat em(104, $font-size) center;
     }
-    &__rtext{
+    &__rtext {
         color: #888;
         font-size: em(12);
         font-style: italic;
 
     }
-    &__el{
+    &__el {
         padding-bottom: em(17);
     }
 }

@@ -10,7 +10,7 @@
             color: #f26522;
             font-weight: 700;
         }
-        a{
+        a {
             text-decoration: none;
             color: inherit;
         }
@@ -19,20 +19,20 @@
         border-bottom: 3px solid #d0d0d0;
         padding: em(28) 0 em(23) em(18);
         margin-bottom: em(12);
-        .star-rating-control{
+        .star-rating-control {
             display: inline-block;
         }
-        .b-rating{
+        .b-rating {
             text-align: center;
             padding: em(12) em(20) em(5) 0;
         }
-        .star-rating{
+        .star-rating {
             width: 21px;
             height: 19px;
         }
     }
     &__label {
-        
+
     }
     &__old-price {
         $font-size: 14;
@@ -60,42 +60,42 @@
     &__incart {
         margin-top: em(4);
     }
-    &__img{
+    &__img {
         max-width: 100%;
         display: block;
         border-right: 20px solid transparent;
         box-sizing: border-box;
     }
-    &__tocompare{
-        $font-size:14;
-        font-size:em($font-size);
+    &__tocompare {
+        $font-size: 14;
+        font-size: em($font-size);
         color: $base__link-color;
         display: block;
         padding: em(20, $font-size) 0 0;
-        input{
+        input {
             vertical-align: middle;
             display: inline-block;
             margin-right: em(5, $font-size);
         }
     }
-    &__sdetalis{
+    &__sdetalis {
 
     }
-    &__list li{
+    &__list li {
         position: relative;
-        &:after{
-            content:"";
+        &:after {
+            content: "";
             display: block;
-            width:11px;
+            width: 11px;
             height: 8px;
             position: absolute;
             background: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIiBbDQoJPCFFTlRJVFkgbnNfZmxvd3MgImh0dHA6Ly9ucy5hZG9iZS5jb20vRmxvd3MvMS4wLyI+DQpdPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRUY1QTJDIiBkPSJNMTEuMDA0IDEuODU2bC0xLjkyNi0xLjg1Ni00Ljc0IDQuNTctMi42NzUtMi4zNzMtMS42NjMgMS42MDMgNC42MzUgNC4xOTcgNi4zNjktNi4xNDF6Ii8+PC9zdmc+) no-repeat;
-            background-size:100% 100%;
+            background-size: 100% 100%;
             top: 12px;
             left: -22px;
         }
     }
-    &__link{
+    &__link {
         display: block;
     }
 }

@@ -6,22 +6,22 @@
         line-height: em(24, $font-size);
         padding: em(8, $font-size) 0;
     }
-    h2{
+    h2 {
         color: #454545;
         font-family: $second-font;
         font-weight: 300;
         $font-size: 24;
         font-size: em($font-size);
         line-height: 30/$font-size;
-        padding-bottom: em(7,$font-size);
+        padding-bottom: em(7, $font-size);
     }
-    h3{
+    h3 {
         color: #454545;
         font-family: $second-font;
         font-weight: 300;
         $font-size: 18;
         font-size: em($font-size);
         line-height: 30/$font-size;
-        padding-bottom: em(7,$font-size);
+        padding-bottom: em(7, $font-size);
     }
 }

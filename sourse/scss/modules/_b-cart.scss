@@ -125,7 +125,7 @@
             display: block;
             padding: em(14, 14) 0 0 em(35, 14);
         }
-        &-del{
+        &-del {
             display: inline-block;
             width: 27px;
             height: 27px;
@@ -134,40 +134,40 @@
             vertical-align: middle;
         }
     }
-    &__cart &__fintbl{
+    &__cart &__fintbl {
         $font-size: 16;
-        td{
+        td {
             border-top: 1px solid #d8cebf;
             vertical-align: middle;
             padding: 0 em(26, $font-size) 0 0;
-            &:nth-child(4){
+            &:nth-child(4) {
                 text-align: center;
             }
-            &:nth-child(5){
+            &:nth-child(5) {
                 text-align: center;
                 padding-right: 0;
             }
         }
-        &-item{
-            padding-top: em(20,16);
-            padding-bottom: em(25,16);
+        &-item {
+            padding-top: em(20, 16);
+            padding-bottom: em(25, 16);
         }
-        &-name{
+        &-name {
             padding-top: em(45, $font-size);
         }
-        &-pricecol{
+        &-pricecol {
             width: 15%;
         }
-        &-countcol{
+        &-countcol {
             text-align: center;
             width: 15%;
         }
-        &-sumcol{
+        &-sumcol {
             text-align: center;
             width: 14%;
         }
     }
-    &__ttotal{
+    &__ttotal {
         color: #454545;
         font-family: $second-font;
         $font-size: 24;
@@ -176,7 +176,7 @@
         font-weight: 900;
         text-align: right;
     }
-    &__cart{
+    &__cart {
         margin-bottom: em(57);
     }
     &__quant {
@@ -222,7 +222,7 @@
             -khtml-user-select: none;
             -ms-user-select: none;
         }
-        &-p{
+        &-p {
             left: auto;
             right: 0;
             border-left: 1px solid #d2d2d2;
