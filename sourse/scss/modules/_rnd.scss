@@ -2,6 +2,9 @@
     &_right {
         text-align: right;
     }
+    &_center{
+        text-align: center;
+    }
     &__button {
         $font-size: 16;
         border-radius: 3px;
@@ -19,6 +22,7 @@
         text-decoration: none;
         text-transform: uppercase;
         position: relative;
+        box-sizing: border-box;
         &:hover {
             background: linear-gradient(to bottom, rgba(9, 92, 21, 1) 0%, rgba(9, 92, 21, 1) 7%, rgba(11, 131, 29, 1) 10%, rgba(12, 139, 32, 1) 29%, rgba(16, 169, 42, 1) 78%, rgba(17, 177, 46, 1) 100%);
         }
@@ -48,6 +52,7 @@
         &_block {
             display: block;
             width: 100%;
+            text-align: center;
         }
         &_ficon {
             padding-left: em(51, $font-size);
@@ -76,6 +81,23 @@
         text-transform: uppercase;
         padding: 0 0 em(25, $font-size) em(17, $font-size);
         position: relative;
+        overflow: hidden;
+        &-line{
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 40px;
+            position: relative;
+            &:after{
+                content:"";
+                display: block;
+                width: 1000px;
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                height: 1px;
+                background: #c3c3c3;
+            }
+        }
         &:before {
             content: " ";
             display: block;
@@ -86,6 +108,13 @@
             top: em(3, $font-size);
             left: 0;
 
+        }
+        &-l{
+            font-size: em(14, $font-size);
+            display: inline-block;
+            text-transform: none;
+            vertical-align: middle;
+            padding: 0 em(40, $font-size);
         }
     }
     &__list {
@@ -159,5 +188,29 @@
         background: rgb(155, 155, 155);
         cursor: default;
         background: linear-gradient(to bottom, rgba(155, 155, 155, 1) 0%, rgba(153, 153, 153, 1) 20%, rgba(141, 141, 141, 1) 71%, rgba(139, 139, 139, 1) 90%, rgba(126, 126, 126, 1) 93%, rgba(126, 126, 126, 1) 100%);
+    }
+    &__dfile{
+        $font-size: 14;
+        font-size: em($font-size);
+        text-decoration: none;
+        padding: em(5,$font-size) em(44, $font-size) 0 em(38, $font-size);
+        display: inline-block;
+        margin: em(27, $font-size) 0;
+        position: relative;
+        &:before{
+            content:"";
+            display: block;
+            width:23px;
+            height:30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../images/sprite2.png) -89px 0 no-repeat;
+        }
+        .size{
+            text-decoration: none;
+            color: #898989;
+            font-style: italic;
+        }
     }
 }

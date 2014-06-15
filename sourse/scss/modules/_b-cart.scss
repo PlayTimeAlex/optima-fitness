@@ -180,7 +180,7 @@
         margin-bottom: em(57);
     }
     &__quant {
-        width: 32px;
+        width: 47px;
         border: 1px solid #d2d2d2;
         padding: 0 33px;
         position: relative;
@@ -190,7 +190,9 @@
             display: block;
             text-align: center;
             width: 100%;
-            font-size: 14px;
+            font-family: $second-font;
+            font-size: 16px;
+            font-weight: 500;
             color: #555555;
             height: 100%;
             -moz-box-sizing: border-box;

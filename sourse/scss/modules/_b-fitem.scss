@@ -37,6 +37,14 @@
             margin: 0 auto;
             max-width: 100%;
         }
+        &.flexslider .flex-next, &.flexslider .flex-prev{
+            border:10px solid #f16632;
+            background-color: #f16632;
+            background-image: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIiBbDQoJPCFFTlRJVFkgbnNfZmxvd3MgImh0dHA6Ly9ucy5hZG9iZS5jb20vRmxvd3MvMS4wLyI+DQpdPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwIDM5LjAxbC0xOC4xMTMtMTkuMDEgMTguMTEzLTE5LjAxLS45NDMtLjk5LTE5LjA1NyAyMCAxOS4wNTcgMjAgLjk0My0uOTl6Ii8+PC9zdmc+);
+        }
+        &.flexslider .flex-next{
+            background-image: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIiBbDQoJPCFFTlRJVFkgbnNfZmxvd3MgImh0dHA6Ly9ucy5hZG9iZS5jb20vRmxvd3MvMS4wLyI+DQpdPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyMCA0MCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgLjk5bDE4LjExMyAxOS4wMS0xOC4xMTMgMTkuMDEuOTQzLjk5IDE5LjA1Ny0yMC0xOS4wNTctMjAtLjk0My45OXoiLz48L3N2Zz4=);
+        }
     }
     &__navlink {
         display: block;
@@ -44,6 +52,7 @@
         height: 96px;
         border: 1px solid #d0d0d0;
         margin: em(44) auto em(22);
+        background-color: #ffffff;
         img {
             max-width: 100%;
             max-height: 100%;
@@ -55,13 +64,16 @@
         }
     }
     &__slider-l {
-        padding: 0 em(30);
         overflow: hidden;
         display: block;
-        img {
-            width: 100%;
-            display: block;
-        }
+        width: 100%;
+        padding-bottom: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #ffffff;
+        box-shadow: inset 0 0 0 3px #f16632;
+
     }
     &_gl {
         position: relative;

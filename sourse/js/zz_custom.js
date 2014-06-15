@@ -50,7 +50,10 @@
             inline: true,
             close: ""
         });
-
+        $('.cb-close').click(function(){
+            $.colorbox.close();
+            return false;
+        });
         //faq (spoiler)
         $('.b-faq__title').click(function () {
             el = $(this).parent();
@@ -292,9 +295,12 @@
         //full item slider
         $(".b-fitem__navlink").click(function () {
             var slide = parseFloat($(this).data('slide')) - 1;
+            var slider = $(this).data('slider');
             $(".b-fitem__navlink").removeClass('active')
             $(this).addClass('active');
-            $('#itemslider_1').flexslider(slide);
+            console.log(slider);
+            $('#'+slider).flexslider(slide);
+
             return false;
         });
 
@@ -361,6 +367,15 @@
             return false;
         });
 
+        //submenu position
+        $('.b-nav__item').hover(function(){
+            $('.b-nav__sub',this).show();
+            if($(this).position().left > 460){
+                $('.b-nav__sub',this).addClass('right');
+            }
+        }, function(){
+            $('.b-nav__sub',this).hide();
+        });
     });
 
 
