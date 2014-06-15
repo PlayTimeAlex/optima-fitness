@@ -1,7 +1,10 @@
 .flexslider{
+    position: relative;
+    overflow: hidden;
     .slides{
         li{
             display: none;
+            list-style: none;
         }
         img{
             max-width: 100%;
@@ -86,4 +89,7 @@
             display: block;
         }
     }
+}
+.flex-direction-nav li{
+    list-style: none;
 }

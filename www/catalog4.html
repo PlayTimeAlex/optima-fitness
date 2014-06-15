@@ -12,7 +12,7 @@
 <body>
 <div class="wrap">
 <header class="b-header">
-    <div class="b-header__top">
+    <div class="b-header__top" id="top">
         <div class="container">
             <div class="row">
                 <div class="span2">
@@ -88,61 +88,305 @@
 <div class="b-page">
     <div class="container">
         <h1 class="b-page__title">КАТАЛОГ</h1>
-        <div class="row_8">
-            <div class="span4">
-                <div class="b-catalog__item">
-                    <h2 class="b-catalog__title">Эллиптический тренажер <span
-                            class="b-catalog__title-tm">OptiCross 21</span></h2>
-                    <div class="row_8">
-                        <div class="span4">
-                            <img src="images/content/cat-item_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
-                                 class="b-catalog__img"/>
-                            <div class="b-rating" data-score="4"></div>
-                            <div class="b-catalog__label">
-                                <span class="rnd__item-label"></span>
-                                <span class="rnd__item-label rnd__item-label_sale"></span>
-                                <span class="rnd__item-label_sale rnd__item-label_recomend"></span>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <ul class="rnd__list rnd__list_check">
-                                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
-                                <li>Наклон: <strong>0-15</strong>%</li>
-                                <li>Скорость: <strong>0,8-20</strong> km/h</li>
-                                <li>Макс. вес человека: <strong>150</strong> kg</li>
-                                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
-                            </ul>
-                            <div class="b-catalog__old-price">400 000 руб</div>
-                            <div class="b-catalog__price">535 000 руб</div>
-                            <div class="b-catalog__stock b-catalog__stock_no">Нет в наличии</div>
-                            <button class="rnd__button rnd__button_blue b-catalog__incart">В корзину</button>
-                        </div>
+        <a class="rnd__banner" href="#"><img src="images/content/catalog-banner.jpg" alt="banner alt"/></a>
+    </div>
+    <div class="b-filter">
+        <div class="container">
+            <div class="row row_8">
+                <div class="span6">
+                    <h2 class="b-filter__title">Подбор по параметрам</h2>
+                    <table class="b-filter__table">
+                        <tr>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Компактные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Популярные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label b-filter__label_disable"><input type="checkbox"
+                                                                                              disabled="disabled"/>С
+                                широким полотном<sup>0</sup></label></td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Для серьезных
+                                тренировок<sup>12</sup></label></td>
+                        </tr>
+                        <tr>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Компактные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Популярные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label b-filter__label_disable"><input type="checkbox"
+                                                                                              disabled="disabled"/>С
+                                широким полотном<sup>0</sup></label></td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Для серьезных
+                                тренировок<sup>12</sup></label></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="span2">
+                    <h2 class="b-filter__title">Подбор по стоимости</h2>
+                    <div class="b-filter__price">
+                        от <input data-min="100" type="text" value="100" class="b-form__text" id="filtermin"/> до <input data-max="10000" type="text" value="10000"  class="b-form__text"  id="filtermax"/> руб
+                        <div id="b-filter__slider"></div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row_8">
             <div class="span4">
+                <div class="b-catalog__item">
+    <h2 class="b-catalog__title"><a href="#">Эллиптический тренажер <span
+            class="b-catalog__title-tm">OptiCross 21</span></a></h2>
+    <div class="row_8">
+        <div class="span4">
+            <a class="b-catalog__link" href="#"><img src="images/content/cat-item2_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                 class="b-catalog__img"/></a>
+            <div class="b-rating">
+                <input name="itemid1" class="b-rating__star" type="radio" />
+                <input name="itemid1" class="b-rating__star" type="radio" />
+                <input name="itemid1" class="b-rating__star" type="radio" />
+                <input name="itemid1" class="b-rating__star" type="radio" />
+                <input name="itemid1" class="b-rating__star" type="radio" />
+            </div>
+            <div class="b-catalog__label">
+                <span class="rnd__item-label"></span>
+                <span class="rnd__item-label rnd__item-label_sale">15</span>
+                <span class="rnd__item-label rnd__item-label_recomend"></span>
+            </div>
+        </div>
+        <div class="span4">
+            <ul class="rnd__list b-catalog__list">
+                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                <li>Наклон: <strong>0-15</strong>%</li>
+                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+            </ul>
+            <div class="b-catalog__old-price">400 000 руб</div>
+            <div class="b-catalog__price">535 000 руб</div>
+            <div class="b-catalog__stock ">Есть в наличии</div>
+            <label class="b-catalog__tocompare"><input type="checkbox"/> К сравнению</label>
+            <button class="rnd__button rnd__button_blue b-catalog__incart ">В корзину</button>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="span4">
+                <div class="b-catalog__item">
+    <h2 class="b-catalog__title"><a href="#">Эллиптический тренажер <span
+            class="b-catalog__title-tm">OptiCross 21</span></a></h2>
+    <div class="row_8">
+        <div class="span4">
+            <a class="b-catalog__link" href="#"><img src="images/content/cat-item2_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                 class="b-catalog__img"/></a>
+            <div class="b-rating">
+                <input name="itemid2" class="b-rating__star" type="radio" />
+                <input name="itemid2" class="b-rating__star" type="radio" />
+                <input name="itemid2" class="b-rating__star" type="radio" />
+                <input name="itemid2" class="b-rating__star" type="radio" />
+                <input name="itemid2" class="b-rating__star" type="radio" />
+            </div>
+            <div class="b-catalog__label">
+                <span class="rnd__item-label"></span>
+                <span class="rnd__item-label rnd__item-label_sale">15</span>
+                <span class="rnd__item-label rnd__item-label_recomend"></span>
+            </div>
+        </div>
+        <div class="span4">
+            <ul class="rnd__list b-catalog__list">
+                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                <li>Наклон: <strong>0-15</strong>%</li>
+                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+            </ul>
+            <div class="b-catalog__old-price"></div>
+            <div class="b-catalog__price">535 000 руб</div>
+            <div class="b-catalog__stock b-catalog__stock_no">Нет в наличии</div>
+            <label class="b-catalog__tocompare"><input type="checkbox"/> К сравнению</label>
+            <button class="rnd__button rnd__button_blue b-catalog__incart rnd__button_disabled">В корзину</button>
+        </div>
+    </div>
+</div>
             </div>
         </div>
         <div class="row_8">
             <div class="span4">
-                <div class="b-paginator">
+                <div class="b-catalog__item">
+    <h2 class="b-catalog__title"><a href="#">Эллиптический тренажер <span
+            class="b-catalog__title-tm">OptiCross 21</span></a></h2>
+    <div class="row_8">
+        <div class="span4">
+            <a class="b-catalog__link" href="#"><img src="images/content/cat-item2_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                 class="b-catalog__img"/></a>
+            <div class="b-rating">
+                <input name="itemid3" class="b-rating__star" type="radio" />
+                <input name="itemid3" class="b-rating__star" type="radio" />
+                <input name="itemid3" class="b-rating__star" type="radio" />
+                <input name="itemid3" class="b-rating__star" type="radio" />
+                <input name="itemid3" class="b-rating__star" type="radio" />
+            </div>
+            <div class="b-catalog__label">
+                <span class="rnd__item-label"></span>
+                <span class="rnd__item-label rnd__item-label_sale">15</span>
+                <span class="rnd__item-label rnd__item-label_recomend"></span>
+            </div>
+        </div>
+        <div class="span4">
+            <ul class="rnd__list b-catalog__list">
+                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                <li>Наклон: <strong>0-15</strong>%</li>
+                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+            </ul>
+            <div class="b-catalog__old-price">400 000 руб</div>
+            <div class="b-catalog__price">535 000 руб</div>
+            <div class="b-catalog__stock b-catalog__stock_no">Нет в наличии</div>
+            <label class="b-catalog__tocompare"><input type="checkbox"/> К сравнению</label>
+            <button class="rnd__button rnd__button_blue b-catalog__incart rnd__button_disabled">В корзину</button>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="span4">
+                <div class="b-catalog__item">
+    <h2 class="b-catalog__title"><a href="#">Эллиптический тренажер <span
+            class="b-catalog__title-tm">OptiCross 21</span></a></h2>
+    <div class="row_8">
+        <div class="span4">
+            <a class="b-catalog__link" href="#"><img src="images/content/cat-item2_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                 class="b-catalog__img"/></a>
+            <div class="b-rating">
+                <input name="itemid4" class="b-rating__star" type="radio" />
+                <input name="itemid4" class="b-rating__star" type="radio" />
+                <input name="itemid4" class="b-rating__star" type="radio" />
+                <input name="itemid4" class="b-rating__star" type="radio" />
+                <input name="itemid4" class="b-rating__star" type="radio" />
+            </div>
+            <div class="b-catalog__label">
+                <span class="rnd__item-label"></span>
+                <span class="rnd__item-label rnd__item-label_sale">15</span>
+                <span class="rnd__item-label rnd__item-label_recomend"></span>
+            </div>
+        </div>
+        <div class="span4">
+            <ul class="rnd__list b-catalog__list">
+                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                <li>Наклон: <strong>0-15</strong>%</li>
+                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+            </ul>
+            <div class="b-catalog__old-price"></div>
+            <div class="b-catalog__price">535 000 руб</div>
+            <div class="b-catalog__stock ">Есть в наличии</div>
+            <label class="b-catalog__tocompare"><input type="checkbox"/> К сравнению</label>
+            <button class="rnd__button rnd__button_blue b-catalog__incart ">В корзину</button>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="row_8">
+            <div class="span4">
+                <div class="b-catalog__item">
+    <h2 class="b-catalog__title"><a href="#">Эллиптический тренажер <span
+            class="b-catalog__title-tm">OptiCross 21</span></a></h2>
+    <div class="row_8">
+        <div class="span4">
+            <a class="b-catalog__link" href="#"><img src="images/content/cat-item2_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                 class="b-catalog__img"/></a>
+            <div class="b-rating">
+                <input name="itemid5" class="b-rating__star" type="radio" />
+                <input name="itemid5" class="b-rating__star" type="radio" />
+                <input name="itemid5" class="b-rating__star" type="radio" />
+                <input name="itemid5" class="b-rating__star" type="radio" />
+                <input name="itemid5" class="b-rating__star" type="radio" />
+            </div>
+            <div class="b-catalog__label">
+                <span class="rnd__item-label"></span>
+                <span class="rnd__item-label rnd__item-label_sale">15</span>
+                <span class="rnd__item-label rnd__item-label_recomend"></span>
+            </div>
+        </div>
+        <div class="span4">
+            <ul class="rnd__list b-catalog__list">
+                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                <li>Наклон: <strong>0-15</strong>%</li>
+                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+            </ul>
+            <div class="b-catalog__old-price">400 000 руб</div>
+            <div class="b-catalog__price">535 000 руб</div>
+            <div class="b-catalog__stock b-catalog__stock_no">Нет в наличии</div>
+            <label class="b-catalog__tocompare"><input type="checkbox"/> К сравнению</label>
+            <button class="rnd__button rnd__button_blue b-catalog__incart rnd__button_disabled">В корзину</button>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="span4">
+                <div class="b-catalog__item">
+    <h2 class="b-catalog__title"><a href="#">Эллиптический тренажер <span
+            class="b-catalog__title-tm">OptiCross 21</span></a></h2>
+    <div class="row_8">
+        <div class="span4">
+            <a class="b-catalog__link" href="#"><img src="images/content/cat-item2_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
+                 class="b-catalog__img"/></a>
+            <div class="b-rating">
+                <input name="itemid6" class="b-rating__star" type="radio" />
+                <input name="itemid6" class="b-rating__star" type="radio" />
+                <input name="itemid6" class="b-rating__star" type="radio" />
+                <input name="itemid6" class="b-rating__star" type="radio" />
+                <input name="itemid6" class="b-rating__star" type="radio" />
+            </div>
+            <div class="b-catalog__label">
+                <span class="rnd__item-label"></span>
+                <span class="rnd__item-label rnd__item-label_sale">15</span>
+                <span class="rnd__item-label rnd__item-label_recomend"></span>
+            </div>
+        </div>
+        <div class="span4">
+            <ul class="rnd__list b-catalog__list">
+                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
+                <li>Наклон: <strong>0-15</strong>%</li>
+                <li>Скорость: <strong>0,8-20</strong> km/h</li>
+                <li>Макс. вес человека: <strong>150</strong> kg</li>
+                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
+            </ul>
+            <div class="b-catalog__old-price">400 000 руб</div>
+            <div class="b-catalog__price">535 000 руб</div>
+            <div class="b-catalog__stock ">Есть в наличии</div>
+            <label class="b-catalog__tocompare"><input type="checkbox"/> К сравнению</label>
+            <button class="rnd__button rnd__button_blue b-catalog__incart ">В корзину</button>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="rnd__btnav">
+            <div class="row_8">
+                <div class="span4">
+                    <div class="b-paginator">
     <span class="b-paginator__text">Страница 1 из 10:</span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">&larr;</a></span>
-    <span class="b-paginator__item b-paginator__item_current">1</span>
+    <span class="b-paginator__item"><a href="#" class="b-paginator__link b-paginator__link_current">1</a></span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">2</a></span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">3</a></span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">...</a></span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">6</a></span>
     <span class="b-paginator__item"><a href="#" class="b-paginator__link">&rarr;</a></span>
 </div>
-            </div>
-            <div class="span4">
-                <div class="b-item-count @@classmod">
+                </div>
+                <div class="span4">
+                    <div class="b-item-count @@classmod">
     <span class="b-item-count__text">Показать количество товаров на странице:</span>
-    <span class="b-item-count__item b-item-count__item_current">10</span>
+    <span class="b-item-count__item"><a class="b-item-count__link b-item-count__link_current" href="#">10</a></span>
     <span class="b-item-count__item"><a class="b-item-count__link" href="#">20</a></span>
     <span class="b-item-count__item"><a class="b-item-count__link" href="#">все</a></span>
 </div>
+                </div>
             </div>
         </div>
     </div>
@@ -154,17 +398,21 @@
                 <div class="b-widget">
                     <h2 class="b-widget__title">О нас</h2>
                     <ul class="b-widget__menu">
-                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
-                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Новости</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Доставка и Оплата</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Условия возврата</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Условия Гарантии</a></li>
                     </ul>
                 </div>
             </div>
             <div class="span2">
                 <div class="b-widget">
-                    <h2 class="b-widget__title">еще наши сайты</h2>
+                    <h2 class="b-widget__title">FAQ</h2>
                     <ul class="b-widget__menu">
-                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
-                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Регистрация приобретенного тренажера</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Инструкции</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Устранение неисправностей</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Оставить сервисную заявку</a></li>
                     </ul>
                 </div>
             </div>
@@ -172,8 +420,11 @@
                 <div class="b-widget">
                     <h2 class="b-widget__title">Служба поддержки</h2>
                     <ul class="b-widget__menu">
-                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Медия</a></li>
-                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Карта сайта</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Стать дилером</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Где купить</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Видео</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Отзывы покупателей</a></li>
+                        <li class="b-widget__menu-item"><a href="#" class="b-widget__menu-link">Контакты</a></li>
                     </ul>
                 </div>
             </div>

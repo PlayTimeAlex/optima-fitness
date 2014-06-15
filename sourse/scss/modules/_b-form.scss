@@ -3,7 +3,7 @@
     &__text , &__textarea{
         box-sizing: border-box;
         border: 1px solid #d2d2d2;
-        font-size: em($font-size);
+        font-size: $font-size*1px;
         color: #464646;
         padding: 0 em(10);
         height: em(33, $font-size);

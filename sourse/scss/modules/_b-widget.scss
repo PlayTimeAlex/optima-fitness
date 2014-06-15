@@ -14,6 +14,10 @@
     &__menu-link {
         font-size: em(14);
         color: $white;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__social-icon {
         display: inline-block;
@@ -35,5 +39,4 @@
             padding: em(11) 0;
         }
     }
-
 }

@@ -1,0 +1,44 @@
+.b-characteristics{
+    border-top:1px dashed #c4c1ba;
+    background:url(../images/tioo-shadow.png) no-repeat center top, #eeeae2 url(../images/bdh.png);
+    background-clip:padding-box;
+    padding: em(65) 0;
+    &__item{
+        border-bottom:1px solid #d8cebf;
+        padding: em(32) 0 em(15);
+        position: relative;
+        &:after{
+            content:"";
+            display: block;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 24%;
+            height: 4px;
+            background: #d8cebf;
+        }
+        h2{
+            color: #454545;
+            $font-size: 14;
+            font-size: em($font-size);
+            font-weight: bold;
+            padding:em(8, $font-size) 0 0;
+        }
+    }
+    &__table{
+        width: 100%;
+        td{
+            color: #454545;
+            $font-size: 14;
+            font-size: em($font-size);
+            padding: em(2) em(17, $font-size);
+            &:first-child{
+                width: 61%;
+            }
+        }
+        tr:nth-child(even) td{
+            background: #d8cebf;
+        }
+
+    }
+}

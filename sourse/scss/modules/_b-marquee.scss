@@ -1,0 +1,26 @@
+.b-marquee{
+    background: #f2f2f2;
+    &__item{
+        color: #898989;
+        $font-size: 14;
+        font-size: em(14);
+        padding: em(24,$font-size) em(5,$font-size) em(24,$font-size) em(80, $font-size);
+        display: inline-block;
+        position: relative;
+        &-num{
+            font-size: em(18, $font-size);
+            font-weight: bold;
+            color: #464646;
+            span{
+                font-weight: normal;
+            }
+        }
+        &-icon{
+            position: absolute;
+            top: 50%;
+            left: em(3, $font-size);
+            font-size: em(65, $font-size);
+            margin-top: -0.5em;
+        }
+    }
+}

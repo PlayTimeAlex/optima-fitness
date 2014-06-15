@@ -14,7 +14,7 @@
         <li class="b-cart-tab__item"><a href="#" class="b-cart-tab__link">Подтверждение заказа</a></li>
     </ul>
 </div>
-<!--<div class="b-cart-tab__tab">
+<div class="b-cart-tab__tab current-tab">
     <div class="b-cart__content">
         <div class="b-cart__text">
             <p>В интернет-магазине Optima Fitness доступны следующие виды доставки</p>
@@ -25,8 +25,8 @@
             <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по России</label>
         </div>
     </div>
-</div> -->
-<!--<div class="b-cart-tab__tab">
+</div>
+<div class="b-cart-tab__tab" style="display:none;">
     <div class="b-cart__content">
         <div class="b-cart__text">
             <p>Для оформления заказа заполните следующие поля. Поля отмеченные звездочкой (*) являются обязательными:</p>
@@ -77,7 +77,7 @@
                     <td><label for="bc-build" class="b-form__label">Квартира:</label></td>
                     <td>
                         <div class="row">
-                            <div class="span3"><input type="text" class="b-form__text b-form__text_short" id="bc-build"><span class="b-form__help">номер дома</span></div>
+                            <div class="span3"><input type="text" class="b-form__text b-form__text_short" id="bc-buildnum"><span class="b-form__help">номер дома</span></div>
                             <div class="span3 rnd_right"><label for="bc-build2" class="b-form__label">Корпус:</label></div>
                             <div class="span3"><input type="text" class="b-form__text b-form__text_short" id="bc-build2"><span class="b-form__help">корпус или строение</span></div>
                         </div>
@@ -92,8 +92,8 @@
             </table>
         </div>
     </div>
-</div>-->
-<!--<div class="b-cart-tab__tab">
+</div>
+<div class="b-cart-tab__tab" style="display:none;">
     <div class="b-cart__content">
         <div class="b-cart__text">
             <p>В интернет-магазине OptimaFitness доступны следующие типы оплаты:</p>
@@ -104,20 +104,8 @@
             <label class="b-cart__var-list-label"><input type="radio" name="pay-type" class="b-cart__var-list-input">Наличными</label>
         </div>
     </div>
-</div> -->
-<!--<div class="b-cart-tab__tab">
-    <div class="b-cart__content">
-        <div class="b-cart__text">
-            <p>В интернет-магазине Optima Fitness доступны следующие виды доставки</p>
-        </div>
-        <div class="b-cart__var-list">
-            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Самовывоз</label>
-            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по Москве</label>
-            <label class="b-cart__var-list-label"><input type="radio" name="delivery" class="b-cart__var-list-input">Доставка по России</label>
-        </div>
-    </div>
-</div> -->
-<div class="b-cart-tab__tab">
+</div>
+<div class="b-cart-tab__tab" style="display:none;">
     <div class="b-cart__content">
         <table class="b-cart__fintbl">
             <thead>
@@ -232,11 +220,11 @@
 <div class="b-cart__bottom">
     <div class="row_8">
         <div class="span4">
-            <button class="rnd__button rnd__button_blue">Вернуться</button>
+            <button class="rnd__button rnd__button_blue prev-order-step" style="display: none;"  data-step="1">Вернуться</button>
         </div>
         <div class="span4 rnd_right">
-            <button class="rnd__button">Далее</button>
-            <button class="rnd__button">закончить оформление</button>
+            <button class="rnd__button next-order-step" data-step="1">Далее</button>
+            <button class="rnd__button finish-order" style="display: none;">закончить оформление</button>
         </div>
     </div>
 </div>

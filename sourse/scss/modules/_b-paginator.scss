@@ -1,19 +1,6 @@
 .b-paginator {
     &__item {
-        $font-size: 14;
-        font-size: em($font-size);
         display: inline-block;
-
-        line-height: em(33, $font-size);
-        padding: 0 em(5, $font-size);
-        min-width: em(33, $font-size);
-        box-sizing: border-box;
-        text-align: center;
-        cursor: default;
-        &_current {
-            background: #f26522;
-            color: #fff;
-        }
     }
     &__text {
         font-size: em(14);
@@ -23,5 +10,18 @@
     }
     &__link {
         text-decoration: none;
+        $font-size: 14;
+        font-size: em($font-size);
+        display:block;
+        line-height: em(33, $font-size);
+        padding: 0 em(5, $font-size);
+        min-width: em(33, $font-size);
+        box-sizing: border-box;
+        text-align: center;
+        &_current {
+            background: #f26522;
+            color: #fff;
+            cursor: default;
+        }
     }
 }

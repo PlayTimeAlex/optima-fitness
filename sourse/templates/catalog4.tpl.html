@@ -3,49 +3,119 @@
 <div class="b-page">
     <div class="container">
         <h1 class="b-page__title">КАТАЛОГ</h1>
-        <div class="row_8">
-            <div class="span4">
-                <div class="b-catalog__item">
-                    <h2 class="b-catalog__title">Эллиптический тренажер <span
-                            class="b-catalog__title-tm">OptiCross 21</span></h2>
-                    <div class="row_8">
-                        <div class="span4">
-                            <img src="images/content/cat-item_190x190.jpg" alt="Эллиптический тренажер OptiCross 21"
-                                 class="b-catalog__img"/>
-                            <div class="b-rating" data-score="4"></div>
-                            <div class="b-catalog__label">
-                                <span class="rnd__item-label"></span>
-                                <span class="rnd__item-label rnd__item-label_sale"></span>
-                                <span class="rnd__item-label_sale rnd__item-label_recomend"></span>
-                            </div>
-                        </div>
-                        <div class="span4">
-                            <ul class="rnd__list rnd__list_check">
-                                <li>Мощность двигателя: <strong>2,6</strong> ps</li>
-                                <li>Наклон: <strong>0-15</strong>%</li>
-                                <li>Скорость: <strong>0,8-20</strong> km/h</li>
-                                <li>Макс. вес человека: <strong>150</strong> kg</li>
-                                <li>Габариты полотна: <strong>1200x250</strong> cm</li>
-                            </ul>
-                            <div class="b-catalog__old-price">400 000 руб</div>
-                            <div class="b-catalog__price">535 000 руб</div>
-                            <div class="b-catalog__stock b-catalog__stock_no">Нет в наличии</div>
-                            <button class="rnd__button rnd__button_blue b-catalog__incart">В корзину</button>
-                        </div>
+        <a class="rnd__banner" href="#"><img src="images/content/catalog-banner.jpg" alt="banner alt"/></a>
+    </div>
+    <div class="b-filter">
+        <div class="container">
+            <div class="row row_8">
+                <div class="span6">
+                    <h2 class="b-filter__title">Подбор по параметрам</h2>
+                    <table class="b-filter__table">
+                        <tr>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Компактные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Популярные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label b-filter__label_disable"><input type="checkbox"
+                                                                                              disabled="disabled"/>С
+                                широким полотном<sup>0</sup></label></td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Для серьезных
+                                тренировок<sup>12</sup></label></td>
+                        </tr>
+                        <tr>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Компактные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Популярные<sup>12</sup></label>
+                            </td>
+                            <td><label class="b-filter__label b-filter__label_disable"><input type="checkbox"
+                                                                                              disabled="disabled"/>С
+                                широким полотном<sup>0</sup></label></td>
+                            <td><label class="b-filter__label"><input type="checkbox"/>Для серьезных
+                                тренировок<sup>12</sup></label></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="span2">
+                    <h2 class="b-filter__title">Подбор по стоимости</h2>
+                    <div class="b-filter__price">
+                        от <input data-min="100" type="text" value="100" class="b-form__text" id="filtermin"/> до <input data-max="10000" type="text" value="10000"  class="b-form__text"  id="filtermax"/> руб
+                        <div id="b-filter__slider"></div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row_8">
             <div class="span4">
+                @@include('blocks/_b-catalog-item.html', {
+                    "id": "1",
+                    "stocktext": "Есть в наличии",
+                    "classmod": "",
+                    "oldprice": "400 000 руб",
+                    "btnmodclass": ""
+                })
+            </div>
+            <div class="span4">
+                @@include('blocks/_b-catalog-item.html', {
+                    "id": "2",
+                    "stocktext": "Нет в наличии",
+                    "classmod": "b-catalog__stock_no",
+                    "oldprice": "",
+                    "btnmodclass": "rnd__button_disabled"
+                })
             </div>
         </div>
         <div class="row_8">
             <div class="span4">
-                @@include('blocks/_paginator.html')
+                @@include('blocks/_b-catalog-item.html', {
+                    "id": "3",
+                    "stocktext": "Нет в наличии",
+                    "classmod": "b-catalog__stock_no",
+                    "oldprice": "400 000 руб",
+                    "btnmodclass": "rnd__button_disabled"
+                })
             </div>
             <div class="span4">
-                @@include('blocks/_item-count.html', {
-                "text": "Показать количество товаров на странице:"
+                @@include('blocks/_b-catalog-item.html', {
+                    "id": "4",
+                    "stocktext": "Есть в наличии",
+                    "classmod": "",
+                    "oldprice": "",
+                    "btnmodclass": ""
                 })
+            </div>
+        </div>
+        <div class="row_8">
+            <div class="span4">
+                @@include('blocks/_b-catalog-item.html', {
+                    "id": "5",
+                    "stocktext": "Нет в наличии",
+                    "classmod": "b-catalog__stock_no",
+                    "oldprice": "400 000 руб",
+                    "btnmodclass": "rnd__button_disabled"
+                })
+            </div>
+            <div class="span4">
+                @@include('blocks/_b-catalog-item.html', {
+                    "id": "6",
+                    "stocktext": "Есть в наличии",
+                    "classmod": "",
+                    "oldprice": "400 000 руб",
+                    "btnmodclass": ""
+                })
+            </div>
+        </div>
+        <div class="rnd__btnav">
+            <div class="row_8">
+                <div class="span4">
+                    @@include('blocks/_paginator.html')
+                </div>
+                <div class="span4">
+                    @@include('blocks/_item-count.html', {
+                    "text": "Показать количество товаров на странице:"
+                    })
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,12 @@
+.b-recentpost{
+    padding: em(37) 0 em(0);
+    &__title{
+        color: $base__link-color;
+        font-family: $second-font;
+        font-weight: 300;
+        $font-size: 28;
+        font-size: em($font-size);
+        letter-spacing: -0.2px;
+        padding-bottom: em(21, $font-size);
+    }
+}

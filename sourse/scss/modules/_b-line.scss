@@ -1,4 +1,20 @@
-.b-line_breacrumb {
+.b-line{
     padding: em(7) 0 em(8);
-    border-bottom: 2px solid #f2f2f2;
+    &_breacrumb {
+        padding: em(7) 0 em(8);
+        border-bottom: 2px solid #f2f2f2;
+    }
+    &_recomended{
+        border-top: 1px dashed #ebe8db;
+        background: url(../images/tioo-shadow.png) no-repeat center top, url(../images/light-brown-bg.jpg) #bfbdb7;
+        background-clip: padding-box;
+        padding: em(44) 0 em(20);
+        margin-bottom: em(70);
+    }
+    &__bdshd{
+        border-top: 1px dashed #ebe8db;
+        background: url(../images/tioo-shadow.png) no-repeat center top;
+        background-clip: padding-box;
+        padding: em(44) 0 em(20);
+    }
 }

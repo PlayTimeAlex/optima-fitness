@@ -1,7 +1,7 @@
 @@include('blocks/_b-header.html')
 @@include('blocks/_b-breadcrumb.html')
 <div class="b-page b-page_gray">
-    <div class="container">
+    <div class="container rnd__float-container">
         <h1 class="rnd__dectitle">отзывы</h1>
         <div class="row_8">
             <div class="span5">
@@ -22,9 +22,38 @@
                 })
             </div>
             <div class="span3">
-                @@include('blocks/_b-review-form.html')
+                @@include('blocks/_b-review-form.html', {
+                "classmod": "rnd__float"
+                })
             </div>
         </div>
     </div>
 </div>
+<section class="b-line b-line_recomended">
+    <div class="container">
+        <h2 class="rnd__dectitle">Рекомендуем обратить внимание!</h2>
+        <div class="row row_8">
+            <div class="span2">
+                @@include('blocks/_b-recomended-small.html', {
+                "id": "9"
+                })
+            </div>
+            <div class="span2">
+                @@include('blocks/_b-recomended-small.html', {
+                "id": "10"
+                })
+            </div>
+            <div class="span2">
+                @@include('blocks/_b-recomended-small.html', {
+                "id": "11"
+                })
+            </div>
+            <div class="span2">
+                @@include('blocks/_b-recomended-small.html', {
+                "id": "12"
+                })
+            </div>
+        </div>
+    </div>
+</section>
 @@include('blocks/_b-footer.html')
