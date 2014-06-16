@@ -376,6 +376,13 @@
         }, function(){
             $('.b-nav__sub',this).hide();
         });
+
+        //where to buy map function
+        $('.b-where-buy__gomap').click(function(){
+            $('.b-where-buy__m-item').removeClass('active');
+            $(this).closest('.b-where-buy__m-item').addClass('active');
+            return false;
+        });
     });
 
 

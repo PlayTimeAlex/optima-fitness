@@ -1,6 +1,6 @@
 .b-fitem {
     padding-top: em(57);
-    padding-bottom: em(95);
+    padding-bottom: em(45);
     &__title {
         color: #454545;
         font-family: "Roboto";
@@ -31,7 +31,7 @@
     }
     &__slider {
         position: relative;
-        margin-top: em(40);
+        margin-top: em(10);
         img {
             display: block;
             margin: 0 auto;
