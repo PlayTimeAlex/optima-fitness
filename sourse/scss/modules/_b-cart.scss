@@ -231,4 +231,16 @@
             border-right: 0;
         }
     }
+    &__backcheck{
+        position: relative;
+        span.error{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top:100%;
+            font-size:0.8em;
+            color:red;
+            font-style: italic;
+        }
+    }
 }

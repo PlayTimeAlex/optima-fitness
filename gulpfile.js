@@ -12,6 +12,8 @@ var imagemin = require('gulp-imagemin');
 //var pngcrush = require('imagemin-pngcrush');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
+var minifyHTML = require('gulp-minify-html');
+
 
 // Concatenate & Minify JS
 gulp.task('scripts', function () {
@@ -52,10 +54,10 @@ gulp.task('fileinclude', function () {
         .pipe(rename({
             extname: ".html"
         }))
+		//.pipe(minifyHTML())
         .pipe(gulp.dest('www'))
         .pipe(livereload());
 });
-
 //imagemin
 gulp.task('imagemin', function () {
     return gulp.src('sourse/images/**/*.*')

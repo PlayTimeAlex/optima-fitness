@@ -1,20 +1,48 @@
 @@include('blocks/_b-header.html')
 @@include('blocks/_b-breadcrumb.html')
-<div class="b-page b-page_gray">
+<!-- только если у нас есть товары для сравнения показывать блок с товарами для сравнения-->
+<div class="b-compare__list-wrap clearfix">
+    <div class="b-compare__list">
+        <div class="container">
+            <div class="row">
+                <div class="span8">
+                    В сравнении 3 товара: <span class="b-compare__list-item"><a href="#del" title="Удалить"></a>OptiTrack 18</span>
+                    <span class="b-compare__list-item"><a href="#del" title="Удалить"></a>OptiTrack 18</span> <span
+                        class="b-compare__list-item"><a href="#del" title="Удалить"></a>OptiTrack 18</span>
+                </div>
+                <div class="span1 rnd__right">
+                    <a class="b-compare__list-link" href="compare.html" title="Сравнить">Сравнить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b-page">
 <div class="b-fitem">
     <div class="container">
         <div class="row row_8">
             <div class="span4">
+                <script type="text/javascript">
+                    jQuery(document).ready(function () {
+                        jQuery('.rnd-group1').colorbox({
+                                close: "",
+                                rel: "rnd-group1",
+                                previous: "",
+                                next: "",
+                                current: "{current}/{total}"
+                            });
+                        });
+                </script>
                 <div class="b-fitem__slider flexslider flexslider_nav" id="itemslider_1">
                     <ul class="slides">
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide1_l.jpg" style="background-image:url(images/content/slide1.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide2_l.jpg" style="background-image:url(images/content/slide2.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide3_l.jpg" style="background-image:url(images/content/slide3.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide4_l.jpg" style="background-image:url(images/content/slide4.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide5_l.jpg" style="background-image:url(images/content/slide5.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide6_l.jpg" style="background-image:url(images/content/slide6.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gyt" href="http://www.youtube.com/embed/VOJyrQa_WR4" style="background-image:url(images/content/slide7.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide8_l.jpg" style="background-image:url(images/content/slide8.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide1_l.jpg" style="background-image:url(images/content/slide1.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide2_l.jpg" style="background-image:url(images/content/slide2.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide3_l.jpg" style="background-image:url(images/content/slide3.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide4_l.jpg" style="background-image:url(images/content/slide4.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide5_l.jpg" style="background-image:url(images/content/slide5.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide6_l.jpg" style="background-image:url(images/content/slide6.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gyt rnd-group1" href="http://www.youtube.com/embed/VOJyrQa_WR4" style="background-image:url(images/content/slide7.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group1" href="images/content/slide8_l.jpg" style="background-image:url(images/content/slide8.jpg);"></a></li>
                     </ul>
                 </div>
 
@@ -41,6 +69,7 @@
                         <div class="b-catalog__price">535 000 руб</div>
                     </div>
                     <div class="span4">
+                        <!--b-catalog__stock_no если нет в наличии-->
                         <span class="b-catalog__stock">Есть в наличии</span>&nbsp;<label
                             class="b-catalog__tocompare"><input
                             type="checkbox"> К сравнению</label>
@@ -106,17 +135,17 @@
                 <div class="b-marquee__item-num">2,5 <span>ps</span></div>
             </li>
             <li class="b-marquee__item">
-                <span class="icon-62 b-marquee__item-icon"></span>
+                <span class="icon-65 b-marquee__item-icon"></span>
                 Наклон
                 <div class="b-marquee__item-num">0-15%</div>
             </li>
             <li class="b-marquee__item">
-                <span class="icon-63 b-marquee__item-icon"></span>
+                <span class="icon-72 b-marquee__item-icon"></span>
                 Скорость
                 <div class="b-marquee__item-num">0,8-20 <span>km/h</span></div>
             </li>
             <li class="b-marquee__item">
-                <span class="icon-64 b-marquee__item-icon"></span>
+                <span class="icon-62 b-marquee__item-icon"></span>
                 Количество программ
                 <div class="b-marquee__item-num">1200x250 <span>cm</span></div>
             </li>
@@ -125,6 +154,43 @@
                 Q factor
                 <div class="b-marquee__item-num">120 <span>cm</span></div>
             </li>
+            <!--
+            <li class="b-marquee__item">
+                <span class="icon-66 b-marquee__item-icon"></span>
+                Макс. вес человека
+                <div class="b-marquee__item-num">150 <span>kg</span></div>
+            </li>
+            <li class="b-marquee__item">
+                <span class="icon-63 b-marquee__item-icon"></span>
+                Габариты бегового полотна
+                <div class="b-marquee__item-num">1200x250 <span>cm</span></div>
+            </li>
+            <li class="b-marquee__item">
+                <span class="icon-67 b-marquee__item-icon"></span>
+                Кардиопрограммы
+                <div class="b-marquee__item-num">1200x250 <span>cm</span></div>
+            </li>
+            <li class="b-marquee__item">
+                <span class="icon-64 b-marquee__item-icon"></span>
+                Масса маховика
+                <div class="b-marquee__item-num">2,5 <span>kg</span></div>
+            </li>
+            <li class="b-marquee__item">
+                <span class="icon-68 b-marquee__item-icon"></span>
+                Длина шага
+                <div class="b-marquee__item-num">120 <span>cm</span></div>
+            </li>
+            <li class="b-marquee__item">
+                <span class="icon-70 b-marquee__item-icon"></span>
+                Масса маховика
+                <div class="b-marquee__item-num">120 <span>kg</span></div>
+            </li>
+            <li class="b-marquee__item">
+                <span class="icon-71 b-marquee__item-icon"></span>
+                Регулировка сидения
+                <div class="b-marquee__item-num">120 <span>cm</span></div>
+            </li>
+            -->
         </ul>
     </div>
 </div>
@@ -625,16 +691,27 @@
 
         <div class="row row_8">
             <div class="span4">
+                <script type="text/javascript">
+                    jQuery(document).ready(function () {
+                        jQuery('.rnd-group2').colorbox({
+                            close: "",
+                            rel: "rnd-group2",
+                            previous: "",
+                            next: "",
+                            current: "{current}/{total}"
+                        });
+                    });
+                </script>
                 <div class="b-fitem__slider flexslider flexslider_nav" id="itemslider_2">
                     <ul class="slides">
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide1_l.jpg" style="background-image:url(images/content/slide1.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide2_l.jpg" style="background-image:url(images/content/slide2.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide3_l.jpg" style="background-image:url(images/content/slide3.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide4_l.jpg" style="background-image:url(images/content/slide4.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide5_l.jpg" style="background-image:url(images/content/slide5.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide6_l.jpg" style="background-image:url(images/content/slide6.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gyt" href="http://www.youtube.com/embed/VOJyrQa_WR4" style="background-image:url(images/content/slide7.jpg);"></a></li>
-                        <li><a class="b-fitem__slider-l b-fitem_gl" href="images/content/slide8_l.jpg" style="background-image:url(images/content/slide8.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide1_l.jpg" style="background-image:url(images/content/slide1.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide2_l.jpg" style="background-image:url(images/content/slide2.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide3_l.jpg" style="background-image:url(images/content/slide3.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide4_l.jpg" style="background-image:url(images/content/slide4.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide5_l.jpg" style="background-image:url(images/content/slide5.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide6_l.jpg" style="background-image:url(images/content/slide6.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gyt rnd-group2" href="http://www.youtube.com/embed/VOJyrQa_WR4" style="background-image:url(images/content/slide7.jpg);"></a></li>
+                        <li><a class="b-fitem__slider-l b-fitem_gl rnd-group2" href="images/content/slide8_l.jpg" style="background-image:url(images/content/slide8.jpg);"></a></li>
                     </ul>
                 </div>
 

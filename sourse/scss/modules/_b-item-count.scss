@@ -19,10 +19,13 @@
         min-width: em(33, $font-size);
         box-sizing: border-box;
         text-align: center;
-        &_current {
+        &_current, &:hover{
             background: #f26522;
             color: #fff;
             cursor: default;
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
     &_single {

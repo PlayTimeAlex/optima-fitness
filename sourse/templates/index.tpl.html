@@ -1,108 +1,151 @@
 @@include('blocks/_b-header.html')
 @@include('blocks/_b-breadcrumb.html')
-<div class="container">
-    <div class="b-pslider flexslider flexslider_control flexslider_nav">
-        <ul class="slides">
-            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
-            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
-            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
-            <li><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></li>
-        </ul>
-    </div>
-    <div class="b-lmenu">
-        <div class="row">
-            <div class="span3">
-                <a class="b-lmenu__button" href="#"><span class="b-lmenu__button-text"><span
-                        class="icon-10 b-lmenu__icon"></span>О нас</span></a>
+    <div class="b-line b-page b-line_gray">
+        <div class="container">
+            <div class="b-pslider flexslider flexslider_control flexslider_nav">
+                <ul class="slides">
+                    <li><a href="catalog4.html"><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></a></li>
+                    <li><a href="catalog4.html"><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></a></li>
+                    <li><a href="catalog4.html"><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></a></li>
+                    <li><a href="catalog4.html"><img src="images/content/main-slide1.jpg" alt="Photo alt here"/></a></li>
+                </ul>
             </div>
-            <div class="span3">
-                <a class="b-lmenu__button" href="#"><span class="b-lmenu__button-text"><span
-                        class="icon-11 b-lmenu__icon"></span>Поддержка</span></a>
-            </div>
-            <div class="span3">
-                <a class="b-lmenu__button" href="#"><span
-                        class="b-lmenu__button-text b-lmenu__button-text_bi">Отзывы<br/>покупателей</span></a>
+            <div class="b-lmenu">
+                <div class="row">
+                    <div class="span3">
+                        <a class="b-lmenu__button" href="about.html"><span class="b-lmenu__button-text"><span
+                                class="icon-10 b-lmenu__icon"></span>О нас</span></a>
+                    </div>
+                    <div class="span3">
+                        <a class="b-lmenu__button" href="#"><span class="b-lmenu__button-text"><span
+                                class="icon-11 b-lmenu__icon"></span>Поддержка</span></a>
+                    </div>
+                    <div class="span3">
+                        <a class="b-lmenu__button" href="testimonials.html"><span
+                                class="b-lmenu__button-text b-lmenu__button-text_bi">Отзывы<br/>покупателей</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="b-recommended">
-        <h2 class="rnd__dectitle">рекомендуемые товары</h2>
+<div class="b-line">
+    <div class="container">
+        <div class="b-recommended">
+            <h2 class="rnd__dectitle">рекомендуемые товары</h2>
 
-        <div class="b-slider flexslider flexslider_control">
-            <ul class="slides">
-                <li>
-                    <div class="row row_8">
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "1"
-                            })
+            <div class="b-slider flexslider flexslider_control">
+                <ul class="slides">
+                    <li>
+                        <div class="row row_8">
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "1",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "2",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "3",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "4",
+                                "classmod": "",
+                                "classmod": "b-recommended__stock_no",
+                                "stocktext": "Нет в наличии",
+                                "disablebtn": "rnd__button_disabled"
+                                })
+                            </div>
                         </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "2"
-                            })
+                    </li>
+                    <li>
+                        <div class="row row_8">
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "5",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": "rnd__button_disabled"
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "6",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "7",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "8",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
                         </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "3"
-                            })
+                    </li>
+                    <li>
+                        <div class="row row_8">
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "9",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "10",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "11",
+                                "classmod": "",
+                                "stocktext": "Есть в наличии",
+                                "disablebtn": ""
+                                })
+                            </div>
+                            <div class="span2">
+                                @@include('blocks/_b-recomended.html', {
+                                "id": "12",
+                                "classmod": "b-recommended__stock_no",
+                                "stocktext": "Нет в наличии",
+                                "disablebtn": "rnd__button_disabled"
+                                })
+                            </div>
                         </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "4"
-                            })
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row row_8">
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "5"
-                            })
-                        </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "6"
-                            })
-                        </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "7"
-                            })
-                        </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "8"
-                            })
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="row row_8">
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "9"
-                            })
-                        </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "10"
-                            })
-                        </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "11"
-                            })
-                        </div>
-                        <div class="span2">
-                            @@include('blocks/_b-recomended.html', {
-                            "id": "12"
-                            })
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

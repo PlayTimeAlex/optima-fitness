@@ -1,5 +1,48 @@
 (function ($) {
     $(document).ready(function () {
+        //translate for plugins
+        if($('html').attr('lang')=='ru'){
+            $.extend($.validator.messages, {
+                required: "Это поле необходимо заполнить.",
+                remote: "Пожалуйста, введите правильное значение.",
+                email: "Пожалуйста, введите корректный адрес электронной почты.",
+                url: "Пожалуйста, введите корректный URL.",
+                date: "Пожалуйста, введите корректную дату.",
+                dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
+                number: "Пожалуйста, введите число.",
+                digits: "Пожалуйста, вводите только цифры.",
+                creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
+                equalTo: "Пожалуйста, введите такое же значение ещё раз.",
+                extension: "Пожалуйста, выберите файл с правильным расширением.",
+                maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов."),
+                minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов."),
+                rangelength: $.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
+                range: $.validator.format("Пожалуйста, введите число от {0} до {1}."),
+                max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
+                min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
+            });
+
+            $.datepicker.regional['ru'] = {
+                closeText: 'Закрыть',
+                prevText: '<Пред',
+                nextText: 'След>',
+                currentText: 'Сегодня',
+                monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
+                    'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+                dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+                dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+                dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                weekHeader: 'Не',
+                dateFormat: 'dd.mm.yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+            };
+        }
+
         //Стилизация списка выбора языков
         $('.b-header__lang-select').styler({
             selectSearch: false
@@ -16,25 +59,6 @@
         $(".b-form__text_tel").mask("(999) 999-9999", {placeholder: "*"});
 
         //UI дейтпикер
-        $.datepicker.regional['ru'] = {
-            closeText: 'Закрыть',
-            prevText: '<Пред',
-            nextText: 'След>',
-            currentText: 'Сегодня',
-            monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-                'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-            monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
-                'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-            dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-            dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-            dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-            weekHeader: 'Не',
-            dateFormat: 'dd.mm.yy',
-            firstDay: 1,
-            isRTL: false,
-            showMonthAfterYear: false,
-            yearSuffix: ''
-        };
         $.datepicker.setDefaults($.datepicker.regional['ru']);
         $('.b-form_datepicker').datepicker({
             beforeShow: function () {
@@ -94,7 +118,7 @@
         }
 
         //colorbox image
-        $('.b-gallery__item, .b-fitem_gl').colorbox({
+        $('.b-gallery__item').colorbox({
             close: "",
             rel: true,
             previous: "",
@@ -120,7 +144,6 @@
                 $('.tocompare', this).each(function () {
                     var contentNew = $(this).html();
                     if (content && contentNew != content) {
-                        console.log('test');
                         $(this).parent().removeClass('equal').addClass('different');
                         return false;
                     } else {
@@ -210,13 +233,64 @@
         });
 
         //cart tabs
+        var cartForm = $('.b-cart__validate').validate({errorElement: "span"});
         $('.next-order-step').click(function () {
             var nextTab = $('.current-tab').next(".b-cart-tab__tab");
+            if($(this).data('step') == 2){
+                if($('.b-cart__validate').valid()){
+                    if($('html').attr('lang')=='ru') {
+                        $('#bankdata').rules("add", {
+                            required: true,
+                            messages: {
+                                required: "Пожалуйста, подтвердите готовность передать данные в банк либо воспользуйтесь другим способом оплаты."
+                            }
+                        });
+                    } else {
+                        $('#bankdata').rules("add", {
+                            required: true,
+                            messages: {
+                                required: "Please, confirm your willingness to send necessary information at the bank or choose another way of payment."
+                            }
+                        });
+                    }
+                    //добавляем на четвертый введенную пользователям информацию
+                    var thtml = "";
+                    $('input','.b-cart__uitable').each(function(){
+                        var fval = $(this).val();
+                        if(fval != "") {
+                            thtml += '<tr><td><strong>'+$(this).data('label')+':</strong></td><td>'+fval+'</td></tr>';
+                        }
+                        $('.b-cart__uitable-usinfo').html(thtml);
+                    });
+                } else {
+                    $('#bankdata').rules("add",{
+                        required: false
+                    });
+                    return false;
+                };
+            }
             $('.current-tab').removeClass('current-tab').hide('fast');
             $('.b-cart-tab__item').eq($(this).data('step')).addClass('b-cart-tab__item_active').prev().removeClass('b-cart-tab__item_active');
-
             nextTab.addClass('current-tab').show('fast');
             if ($(this).data('step') == 3) {
+                if($('.b-cart__withoutbank').is(":checked")){
+                    $('.b-cart__hidebank').css('display','none');
+                    $('#bankdata').rules("add",{
+                        required: false
+                    });
+                } else {
+                    $('.b-cart__hidebank').css('display','block');
+                    $('#bankdata').rules("add",{
+                        required: true
+                    });
+                }
+
+                //добавляем на четвертый шаг способ оплаты
+                $('.b-cart__uitable-payt').html($('.b-cart__pay-type').find('input:checked').data('label'));
+
+                //добавляем на четвертый шаг способ доставки
+                $('.b-cart__uitable-deltype').html($('.b-cart__delivery-type').find('input:checked').data('label'));
+
                 $(this).hide('fast');
                 $('.finish-order').show('fast');
             } else {
@@ -383,6 +457,11 @@
             $(this).closest('.b-where-buy__m-item').addClass('active');
             return false;
         });
+
+        //main form validator
+        $('.b-form__validate').validate({
+            errorElement: "span"
+        });
     });
 
 
@@ -398,7 +477,6 @@
             animationSpeed: 250,
             slideshow: false,
             after: function (slider) {
-                console.log(slider.currentSlide);
                 $(".b-fitem__navlink", '#' + slider.attr('id') + '_nav').removeClass('active').eq(slider.currentSlide).addClass('active');
             }
         });

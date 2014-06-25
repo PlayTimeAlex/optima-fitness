@@ -9,6 +9,9 @@
         border-right: em(18) solid transparent;
         box-sizing: border-box;
     }
+    &__img-wrap{
+        display: block;
+    }
     &__link {
         display: block;
     }
@@ -55,10 +58,13 @@
         font-family: $second-font;
         padding: 0 0 em(3, 24);
     }
-    &__instock {
+    &__stock {
         font-size: em(14);
         color: #598527;
         padding: 0 0 em(9, 14) 0;
+        &_no{
+            color: #e41212;
+        }
     }
     &__item_small {
         margin-top: em(15);

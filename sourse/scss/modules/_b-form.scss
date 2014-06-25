@@ -17,6 +17,9 @@
         &_short {
             width: em(95, $font-size);
         }
+        &.error{
+            border-color:red;
+        }
     }
     &__text:focus, &__textarea:focus {
         box-shadow: 0 0 5px #0076a3;
@@ -44,6 +47,7 @@
         width: 100%;
         td {
             padding-bottom: em(14);
+            vertical-align: top;
             &:first-child {
                 width: em(225);
                 vertical-align: top;
@@ -75,6 +79,7 @@
         font-size: em(12);
         color: #898989;
         font-style: italic;
+        padding-top: em(8, 12);
         &_cell {
             padding-left: em(25, 12);
         }
@@ -148,5 +153,13 @@
     }
     &__el {
         padding-bottom: em(17);
+    }
+    &__validate span.error, &__table span.error{
+        color:red;
+        $font-size:11;
+        font-size:em($font-size);
+        padding-top: em(1,$font-size);
+        display: block;
+        font-style: italic;
     }
 }
