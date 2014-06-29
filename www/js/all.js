@@ -11527,6 +11527,13 @@ $.format = function deprecated() {
         $('.b-form__validate').validate({
             errorElement: "span"
         });
+
+        //ВРЕМЕННЫЙ КОД ДЛЯ ДЕМОНСТРАЦИИ. ОБЯЗАТЕЛЬНО УДАЛИТЬ!
+        $('button:contains("В корзину")').not('.rnd__button_disabled').colorbox({
+            inline:true,
+            href: "#addcart"
+        });
+
     });
 
 

@@ -2,7 +2,7 @@
     padding-bottom: em(53);
     &__button {
         background-color: rgb(59, 133, 200);
-        background: linear-gradient(to bottom, rgba(59, 133, 200, 1) 0%, rgba(55, 126, 190, 1) 26%, rgba(44, 106, 162, 1) 73%, rgba(40, 99, 152, 1) 98%, rgba(22, 81, 129, 1) 99%, rgba(22, 81, 129, 1) 100%);
+        background-image: linear-gradient(to bottom, rgba(59, 133, 200, 1) 0%, rgba(55, 126, 190, 1) 26%, rgba(44, 106, 162, 1) 73%, rgba(40, 99, 152, 1) 98%, rgba(22, 81, 129, 1) 99%, rgba(22, 81, 129, 1) 100%);
         background-size: 100% 100%;
         height: em(100);
         display: table;
