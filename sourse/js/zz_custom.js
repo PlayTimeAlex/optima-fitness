@@ -466,7 +466,8 @@
         //ВРЕМЕННЫЙ КОД ДЛЯ ДЕМОНСТРАЦИИ. ОБЯЗАТЕЛЬНО УДАЛИТЬ!
         $('button:contains("В корзину")').not('.rnd__button_disabled').colorbox({
             inline:true,
-            href: "#addcart"
+            href: "#addcart",
+            close: ""
         });
 
     });
