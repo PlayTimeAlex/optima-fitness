@@ -67,15 +67,27 @@
         position: absolute;
         display: block;
         border: 0 !important;
-        border-bottom: 15px solid #0076a3 !important;
-        border-right: 14px solid transparent !important;
+        width:14px;
+        height:15px;
+        background-color:transparent!important;
         border-radius: 0;
-        background: transparent !important;
-        top: 100%;
+        margin-left: -7px;
+        &:before{
+            content:"";
+            display:block;
+            border-bottom: 15px solid #0076a3 !important;
+            border-right: 14px solid transparent !important;
+            border-radius: 0;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+        }
         &:nth-child(2) {
-            border-right: 0 !important;
-            border-left: 14px solid transparent !important;
-            margin-left: -14px;
+            &:before{
+                border-right: 0 !important;
+                border-left: 14px solid transparent !important;
+                left:-7px;
+            }
         }
     }
 }
